@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Sh1katagana1 OSINT Dashboard</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Page level plugin CSS-->
+  <!-- <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet"> -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <style type="text/css">
+  @import url("css/sb-admin.min.css");
+  </style>
+</head>
+
+<body id="page-top">
+
+<nav class="navbar navbar-expand navbar-dark bg-dark static-top"><a class="navbar-brand mr-1" href="index.html">Sh1katagana1 OSINT Dashboard</a><img src="Files/logo.png" class="logobottom2" alt="Placeholder image">
+
+</nav>
+
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="sidebar navbar-nav">
+      <li class="nav-item"> <a class="nav-link" href="Search.html"><em class="fas fa-search-plus"></em><span>Search</span></a> </li>
+      <li class="nav-item"> <a class="nav-link" href="Email.html"> <em class="far fa-envelope"></em> <span>Email</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Username.html"> <em class="far fa-id-card"></em> <span>Username</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Name.html"> <em class="fas fa-file-signature"></em> <span>Name</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Telephone.html"> <em class="fas fa-phone"></em> <span>Telephone</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Twitter.html"> <em class="fab fa-twitter"></em> <span>Twitter</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Instagram.html"> <em class="fab fa-instagram"></em> <span>Instagram</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Communities.html"> <em class="fab fa-reddit-square"></em> <span>Communities</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Linkedin.html"> <em class="fab fa-linkedin"></em> <span>LinkedIn</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Domain.html"> <em class="fas fa-globe"></em> <span>Domain</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="IP.html"> <em class="fas fa-terminal"></em> <span>IP</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Videos.html"> <em class="fab fa-youtube"></em> <span>Videos</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Images.html"> <em class="fas fa-image"></em> <span>Images</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Documents.html"> <em class="fas fa-file-alt"></em> <span>Documents</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Pastes.html"> <em class="fas fa-receipt"></em> <span>Pastes</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Business.html"> <em class="far fa-building"></em> <span>Business & Government</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Location.html"> <em class="fas fa-map-marked-alt"></em> <span>Maps & Location</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Currencies.html"> <em class="fab fa-btc"></em> <span>Currencies</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Breaches.html"> <em class="fas fa-user-secret"></em> <span>Breaches</span></a></li>
+    </ul>
+
+
+<!-- Breadcrumbs-->
+<ol class="breadcrumb">
+  <h4 class="text-center">LinkedIn Search Tools</h4><br>
+
+    <div id="content-wrapper">
+
+      <div class="container-fluid">
+
+         <!-- <p>Coming Soon - Under Construction </p> -->
+
+
+         <script type="text/javascript">
+          function doSearch01(keyword, fname, lname, title, company, school)
+          {window.open('https://www.linkedin.com/search/results/people/?keywords=' + keyword + '&firstName=' + fname + '&lastName=' + lname + '&title=' + title + '&company=' + company + '&school=' + school, 'Search01window');}
+          </script>
+          <form onsubmit="doSearch01(this.keyword.value, this.fname.value, this.lname.value, this.title.value, this.company.value, this.school.value); return false;">
+          <input type="text" name="fname" size="20" placeholder="First Name" />
+          <input type="text" name="lname" size="20" placeholder="Last Name" /><br>
+          <input type="text" name="keyword" size="20" placeholder="Keyword" />
+          <input type="text" name="title" size="20" placeholder="Title" /><br>
+          <input type="text" name="company" size="20" placeholder="Company" />
+          <input type="text" name="school" size="20" placeholder="School" /><br>
+          <input type="submit" style="width:140px" Value="Person Search" />
+          </form><br>
+          <script type="text/javascript">
+          function doSearch02(keyword, title)
+          {window.open('https://www.linkedin.com/search/results/content/?authorJobTitle=%22' + title + '%22&keywords=' + keyword, 'Search02window');}
+          </script>
+          <form onsubmit="doSearch02(this.keyword.value, this.title.value); return false;">
+          <input type="text" name="keyword" size="20" placeholder="Keyword" />
+          <input type="text" name="title" size="20" placeholder="Title" /><br>
+          <input type="submit" style="width:140px" Value="Post Search" />
+          </form><br>
+          <script type="text/javascript">
+          function doSearch03(keyword, fname, lname, title, school, company)
+          {window.open('https://www.google.com/search?q=site%3Awww.linkedin.com+' + keyword + '+' + fname + '+' + lname + '+' + title + '+' + company + '+' + school, 'Search03window');}
+          </script>
+          <form onsubmit="doSearch03(this.keyword.value, this.fname.value, this.lname.value, this.title.value, this.company.value, this.school.value); return false;">
+          <input type="text" name="fname" size="20" placeholder="First Name" />
+          <input type="text" name="lname" size="20" placeholder="Last Name" /><br>
+          <input type="text" name="keyword" size="20" placeholder="Keyword" />
+          <input type="text" name="title" size="20" placeholder="Title" /><br>
+          <input type="text" name="company" size="20" placeholder="Company" />
+          <input type="text" name="school" size="20" placeholder="School" /><br>
+          <input type="submit" style="width:140px" Value="Google Search" />
+          </form><br>
+          <script type="text/javascript">
+          function doSearch04(keyword, fname, lname, title, school, company)
+          {window.open('https://www.bing.com/search?q=site%3Alinkedin.com+' + keyword + '+' + fname + '+' + lname + '+' + title + '+' + company + '+' + school, 'Search04window');}
+          </script>
+          <form onsubmit="doSearch04(this.keyword.value, this.fname.value, this.lname.value, this.title.value, this.company.value, this.school.value); return false;">
+          <input type="text" name="fname" size="20" placeholder="First Name" />
+          <input type="text" name="lname" size="20" placeholder="Last Name" /><br>
+          <input type="text" name="keyword" size="20" placeholder="Keyword" />
+          <input type="text" name="title" size="20" placeholder="Title" /><br>
+          <input type="text" name="company" size="20" placeholder="Company" />
+          <input type="text" name="school" size="20" placeholder="School" /><br>
+          <input type="submit" style="width:140px" Value="Bing Search" />
+          </form><br>
+          <script type="text/javascript">
+          function doSearch05(keyword, fname, lname, title, school, company)
+          {window.open('https://www.yandex.com/search/?text=site%3Alinkedin.com' + '+' keyword + '+' + fname + '+' + lname + '+' + title + '+' + company + '+' + school, 'Search05window');}
+          </script>
+          <form onsubmit="doSearch05(this.keyword.value, this.fname.value, this.lname.value, this.title.value, this.company.value, this.school.value); return false;">
+          <input type="text" name="fname" size="20" placeholder="First Name" />
+          <input type="text" name="lname" size="20" placeholder="Last Name" /><br>
+          <input type="text" name="keyword" size="20" placeholder="Keyword" />
+          <input type="text" name="title" size="20" placeholder="Title" /><br>
+          <input type="text" name="company" size="20" placeholder="Company" />
+          <input type="text" name="school" size="20" placeholder="School" /><br>
+          <input type="submit" style="width:140px" Value="Yandex Search" />
+          </form><br>
+          <script type="text/javascript">
+          function doSearch06(keyword)
+          {window.open('https://www.linkedin.com/search/results/companies/?keywords=' + keyword, 'Search06window');}
+          </script>
+          <form onsubmit="doSearch06(this.keyword.value); return false;">
+          <input type="text" name="keyword" size="30" placeholder="Keyword" />
+          <input type="submit" style="width:140px" Value="Company Search" />
+          </form>
+          <script type="text/javascript">
+          function doSearch07(keyword)
+          {window.open('https://www.linkedin.com/search/results/groups/?keywords=' + keyword, 'Search07window');}
+          </script>
+          <form onsubmit="doSearch07(this.keyword.value); return false;">
+          <input type="text" name="keyword" size="30" placeholder="Keyword" />
+          <input type="submit" style="width:140px" Value="Group Search" />
+          </form>
+          <script type="text/javascript">
+          function doSearch08(keyword)
+          {window.open('https://www.linkedin.com/search/results/schools/?keywords=' + keyword, 'Search08window');}
+          </script>
+          <form onsubmit="doSearch08(this.keyword.value); return false;">
+          <input type="text" name="keyword" size="30" placeholder="Keyword" />
+          <input type="submit" style="width:140px" Value="School Search" />
+          </form>
+          <script type="text/javascript">
+          function doSearch09(keyword)
+          {window.open('https://www.linkedin.com/search/results/events/?keywords=' + keyword, 'Search09window');}
+          </script>
+          <form onsubmit="doSearch09(this.keyword.value); return false;">
+          <input type="text" name="keyword" size="30" placeholder="Keyword" />
+          <input type="submit" style="width:140px" Value="Event Search" />
+          </form>
+          <script type="text/javascript">
+          function doSearch10(keyword)
+          {window.open('https://www.linkedin.com/jobs/index/?keywords=' + keyword, 'Search10window');}
+          </script>
+          <form onsubmit="doSearch10(this.keyword.value); return false;">
+          <input type="text" name="keyword" size="30" placeholder="Keyword" />
+          <input type="submit" style="width:140px" Value="Job Search" />
+          </form><br>
+          <script type="text/javascript">
+          function doSearch11(Search11)
+          {window.open('http://www.linkedin.com/in/' + Search11, 'Search11window');}
+          </script>
+          <form onsubmit="doSearch11(this.Search11.value); return false;">
+          <input type="text" name="Search11" size="30" placeholder="Username" />
+          <input type="submit" style="width:140px" value="Profile" /><br></form>
+          <script type="text/javascript">
+          function doSearch12(Search12)
+          {window.open('https://search.google.com/test/mobile-friendly?url=http://linkedin.com/in/' + Search12, 'Search12window');}
+          </script>
+          <form onsubmit="doSearch12(this.Search12.value); return false;">
+          <input type="text" name="Search12" size="30" placeholder="Username" />
+          <input type="submit" style="width:140px" value="Mobile Profile" /><br></form>
+          <script type="text/javascript">
+          function doSearch13(Search13)
+          {window.open('https://www.google.com/search?q=site:linkedin.com+' + Search13 + '&source=lnms&tbm=isch', 'Search13window');}
+          </script>
+          <form onsubmit="doSearch13(this.Search13.value); return false;">
+          <input type="text" name="Search13" size="30" placeholder="Username or Real Name" value="" />
+          <input type="submit" style="width:140px" value="Google Photos" /><br></form>
+          <script type="text/javascript">
+          function doSearch14(Search14)
+          {window.open('https://www.bing.com/images/search?q=site%3alinkedin.com+' + Search14 + '&scenario=ImageBasicHover', 'Search14window');}
+          </script>
+          <form onsubmit="doSearch14(this.Search14.value); return false;">
+          <input type="text" name="Search14" size="30" placeholder="Username or Real Name" value="" />
+          <input type="submit" style="width:140px" value="Bing Photos" /><br></form>
+          <script type="text/javascript">
+          function doSearch15(Search15)
+          {window.open('https://www.google.com/search?q=site:linkedin.com+' + Search15 + '&tbm=vid', 'Search15window');}
+          </script>
+          <form onsubmit="doSearch15(this.Search15.value); return false;">
+          <input type="text" name="Search15" size="30" placeholder="Search Terms" value="" />
+          <input type="submit" style="width:140px" value="Videos" /><br></form>
+
+         <br>
+         <br>
+
+   <!-- Page Content --></div>
+       <p><!-- /.container-fluid -->
+         <b>Additional Resources </b></p>
+       <div>
+         <div>
+           <div>
+             
+             <p><strong>Google operators</strong></p>
+             <p>site:linkedin.com  microsoft &quot;jason jones&quot;</p>
+             <p>&nbsp;</p>
+             <p>Google operator  using your target&rsquo;s title:</p>
+             <p>Site:linkedin.com  &ldquo;Assistant General Counsel at Maxjet&rdquo;</p>
+             <p>&nbsp;</p>
+             <p><strong>Using Google mobile  test for passive recon:             </strong></p>
+             <p>Browse to <a target="_blank" rel="noopener noreferrer" href="https://search.google.com/test/mobile-friendly">https://search.google.com/test/mobile-friendly</a> </p>
+             <p>enter your targets LinkedIn profile URL http://linkedin.com/in/username</p>
+             <p>&nbsp;</p>
+             <p><strong>Note</strong>: Once you go to  LinkedIn.com be on a burner account or get nagged</p>
+             <p>&nbsp;</p>
+             <p><a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/search/results/people/?keywords=keyword">https://linkedin.com/search/results/people/?keywords=keyword</a></p>
+             <p><a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/search/results/content/">https://linkedin.com/search/results/content/</a></p>
+             <p><a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/search/results/companies/">https://linkedin.com/search/results/companies/</a></p>
+             <p><a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/search/results/groups/">https://linkedin.com/search/results/groups/</a></p>
+            <!-- <p><a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/jobs/index/?keywords=john%20wilson">https://linkedin.com/jobs/index/?keywords=john%20wilson</a></p>-->
+             <p><a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/search/results/schools/">https://linkedin.com/search/results/schools/</a></p>
+             <p><a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/search/results/content/events/">https://linkedin.com/search/results/content/events/</a></p>
+             <p>&nbsp;</p>
+             <p><strong>Profiles</strong></p>
+             <p><a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/username">https://linkedin.com/in/username</a></p>
+             <p><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/micahhoffman/">https://www.linkedin.com/in/micahhoffman/</a></p>
+             <p>&nbsp;</p>
+             <p>Locating an account  using an email address:</p>
+             <ol type="1">
+               <li value="1">Create a .csv file with the       only contents being the target email</li>
+               <li>Log into a burner LinkedIn       account and upload the csv to <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/mynetwork/import-contacts/">https://www.linkedin.com/mynetwork/import-contacts/</a>&nbsp;</li>
+               <li>With all work done directly       on LinkedIn expect the account holder to get a notification</li>
+             </ol>
+             <p>&nbsp;</p>
+             <p>Once you locate your  target&rsquo;s profile (reminder they will likely get notified that you viewed it):</p>
+             <ol type="1">
+               <li value="1">Right click on their photo       and open it in a new tab, then right click on it and reverse image search       it via a context menu extension or Google reverse image search</li>
+               <li>Click on &ldquo;More&rdquo; and download       a pdf of their profile</li>
+               <li>Copy their title to your       notes</li>
+               <li>Click on the &ldquo;Contact info&rdquo;       to see if there is more than a LinkedIn URL</li>
+               <li>Copy their job history to       your notes, former employers are pivot points</li>
+               <li>Note Universities as possible       pivot points</li>
+               <li>Note references and       colleagues as pivot points</li>
+               <li>Review any interests or       published articles</li>
+             </ol>
+             <p><a target="_blank" rel="noopener noreferrer" href="https://www.intelligencewithsteve.com/post/a-guide-to-searching-linkedin-by-email-address">https://www.intelligencewithsteve.com/post/a-guide-to-searching-linkedin-by-email-address</a> | Another way to search LinkedIn by email address</p>
+             <p>&nbsp;</p>
+             <p>&nbsp;</p>
+           </div>
+         </div>
+       </div>
+<p>&nbsp;</p>
+    </div>
+    <!-- /.content-wrapper -->
+
+</div>
+  <!-- /#wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+
+
+  <!-- Bootstrap core JavaScript-->
+<script src="js/jquery.min.js"></script>
+  <!-- <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+<script src="js/bootstrap.bundle.min.js"></script>
+
+  
+
+  
+</body>
+
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Sh1katagana1 OSINT Dashboard</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Page level plugin CSS-->
+  <!-- <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet"> -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <style type="text/css">
+  @import url("css/sb-admin.min.css");
+  </style>
+</head>
+
+<body id="page-top">
+
+<nav class="navbar navbar-expand navbar-dark bg-dark static-top"><a class="navbar-brand mr-1" href="index.html">Sh1katagana1 OSINT Dashboard</a><img src="Files/logo.png" class="logobottom2" alt="Placeholder image">
+
+</nav>
+
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="sidebar navbar-nav">
+      <li class="nav-item"> <a class="nav-link" href="Search.html"><em class="fas fa-search-plus"></em><span>Search</span></a> </li>
+      <li class="nav-item"> <a class="nav-link" href="Email.html"> <em class="far fa-envelope"></em> <span>Email</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Username.html"> <em class="far fa-id-card"></em> <span>Username</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Name.html"> <em class="fas fa-file-signature"></em> <span>Name</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Telephone.html"> <em class="fas fa-phone"></em> <span>Telephone</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Twitter.html"> <em class="fab fa-twitter"></em> <span>Twitter</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Instagram.html"> <em class="fab fa-instagram"></em> <span>Instagram</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Communities.html"> <em class="fab fa-reddit-square"></em> <span>Communities</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Linkedin.html"> <em class="fab fa-linkedin"></em> <span>LinkedIn</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Domain.html"> <em class="fas fa-globe"></em> <span>Domain</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="IP.html"> <em class="fas fa-terminal"></em> <span>IP</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Videos.html"> <em class="fab fa-youtube"></em> <span>Videos</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Images.html"> <em class="fas fa-image"></em> <span>Images</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Documents.html"> <em class="fas fa-file-alt"></em> <span>Documents</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Pastes.html"> <em class="fas fa-receipt"></em> <span>Pastes</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Business.html"> <em class="far fa-building"></em> <span>Business & Government</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Location.html"> <em class="fas fa-map-marked-alt"></em> <span>Maps & Location</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Currencies.html"> <em class="fab fa-btc"></em> <span>Currencies</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Breaches.html"> <em class="fas fa-user-secret"></em> <span>Breaches</span></a></li>
+    </ul>
+
+
+<!-- Breadcrumbs-->
+<ol class="breadcrumb">
+  <h4 class="text-center">Business Tools</h4><br>
+
+    <div id="content-wrapper">
+
+      <div class="container-fluid">
+
+         <form onsubmit="popAll(this.PopAll.value); return false;">
+         <input type="text" id="PopAll" name="PopAll" size="30" placeholder="Business"/>
+         <input type="submit" style="width:140px" value="⇣ Populate All" /><br /></form><br>
+
+         <script type="text/javascript">
+          function doPopAll(PopAll)
+          {var pop = document.getElementById("PopAll");
+          for (j = 1; j <= 100; j++){
+          if (j < 10){
+          j = "0" + j.toString();}
+          else {j = j.toString();}
+          console.log(j)
+          item = document.getElementById("Search" + j);
+          if (item != null){
+          item.value = pop.value;}}}
+          </script>
+          <!-- <form onsubmit="doPopAll(this.PopAll.value); return false;">
+          <input type="text" id="PopAll" name="PopAll" size="30" placeholder="Business"/>
+          <input type="submit" style="width:140px" value="Populate All" /><br></form><br> -->
+          
+          <script type="text/javascript">
+            function doSearch01(Search01)
+            {window.open('https://search.uscourts.gov/search?affiliate=uscourts_pacer&locale=en&query=' + Search01, 'Search01window');}
+            </script>
+            <form onsubmit="doSearch01(this.Search01.value); return false;">
+            <input type="text" id="Search01" name="Search01" size="30" placeholder="Business" value="" />
+            <input type="submit" style="width:140px" value="Pacer" /><br></form>
+            <script type="text/javascript">
+            function doSearch02(Search02)
+            {window.open('https://search.foia.gov/search?affiliate=foia.gov&query=' + Search02 + '&t=1', 'Search02window');}
+            </script>
+            <form onsubmit="doSearch02(this.Search02.value); return false;">
+            <input type="text" id="Search02" name="Search02" size="30" placeholder="Business" value="" />
+            <input type="submit" style="width:140px" value="FOIA" /><br></form>
+            <script type="text/javascript">
+            function doSearch03(Search03)
+            {window.open('https://www.muckrock.com/foi/list/?q=' + Search03 + '&t=1', 'Search03window');}
+            </script>
+            <form onsubmit="doSearch03(this.Search03.value); return false;">
+            <input type="text" id="Search03" name="Search03" size="30" placeholder="Business" value="" />
+            <input type="submit" style="width:140px" value="Muckrock FOIA" /><br></form>
+            <script type="text/javascript">
+            function doSearch04(Search04)
+            {window.open('https://trellis.law/rulings/"' + Search04 + '"?state=az&state=ca&state=ct&state=de&state=fl&state=ga&state=il&state=ma&state=nv&state=nj&state=ny&state=oh&state=pa&state=ri&state=tx&state=wa', 'Search04window');}
+            </script>
+            <form onsubmit="doSearch04(this.Search04.value); return false;">
+            <input type="text" id="Search04" name="Search04" size="30" placeholder="Business" value="" />
+            <input type="submit" style="width:140px" value="Trellis" /><br></form>
+            <script type="text/javascript">
+            function doSearch05(Search05)
+            {window.open('https://opencorporates.com/officers?q=' + Search05, 'Search05window');}
+            </script>
+            <form onsubmit="doSearch05(this.Search05.value); return false;">
+            <input type="text" id="Search05" name="Search05" size="30" placeholder="Business" value="" />
+            <input type="submit" style="width:140px" value="Open Corporates" /><br></form>
+            <script type="text/javascript">
+            function doSearch06(Search06)
+            {window.open('https://www.aihitdata.com/search/companies?t=' + Search06, 'Search06window');}
+            </script>
+            <form onsubmit="doSearch06(this.Search06.value); return false;">
+            <input type="text" id="Search06" name="Search06" size="30" placeholder="Business" value="" />
+            <input type="submit" style="width:140px" value="AIHIT" /><br></form>
+            <script type="text/javascript">
+            function doSearch07(Search07)
+            {window.open('https://littlesis.org/search?q=' + Search07, 'Search07window');}
+            </script>
+            <form onsubmit="doSearch07(this.Search07.value); return false;">
+            <input type="text" id="Search07" name="Search07" size="30" placeholder="Business" value="" />
+            <input type="submit" style="width:140px" value="LittleSis" /><br></form>
+            <script type="text/javascript">
+            function doSearch08(Search08)
+            {window.open('https://www.opensecrets.org/search?q=' + Search08, 'Search08window');}
+            </script>
+            <form onsubmit="doSearch08(this.Search08.value); return false;">
+            <input type="text" id="Search08" name="Search08" size="30" placeholder="Business" value="" />
+            <input type="submit" style="width:140px" value="Open Secrets" /><br></form>
+            <script type="text/javascript">
+            function doSearch09(Search09)
+            {window.open('https://www.courtlistener.com/?type=r&q=' + Search09, 'Search09window');}
+            </script>
+            <form onsubmit="doSearch09(this.Search09.value); return false;">
+            <input type="text" id="Search09" name="Search09" size="30" placeholder="Business" value="" />
+            <input type="submit" style="width:140px" value="Recap" /><br></form>
+            <script type="text/javascript">
+     function doSearch10(Search10)
+            {window.open('https://www.annualreports.com/Companies?search=' + Search10, 'Search10window');}
+            </script>
+            <form onsubmit="doSearch10(this.Search10.value); return false;">
+            <input type="text" id="Search10" name="Search10" size="30" placeholder="Business" value="" />
+            <input type="submit" style="width:140px" value="Annual Reports" /><br></form>
+            <script type="text/javascript">
+     function doSearch11(Search11)
+            {window.open('http://openleis.com/legal_entities?utf8=%E2%9C%93&q=' + Search11, 'Search11window');}
+            </script>
+            <form onsubmit="doSearch11(this.Search11.value); return false;">
+            <input type="text" id="Search11" name="Search11" size="30" placeholder="Business" value="" />
+            <input type="submit" style="width:140px" value="Open Leis" /><br></form>
+            <script type="text/javascript">
+    function doSearch12(Search12)
+            {window.open('https://data.occrp.org/search?q=' + Search12, 'Search12window');}
+            </script>
+            <form onsubmit="doSearch12(this.Search12.value); return false;">
+            <input type="text" id="Search12" name="Search12" size="30" placeholder="Business" value="" />
+            <input type="submit" style="width:140px" value="OCCRP" /><br></form>
+            <script type="text/javascript">
+    
+     
+                    
+              
+              
+              
+              
+              
+              function doSearch82(Search82)
+              {window.open('https://www.thelayoff.com/search.php?q=' + Search82, 'Search82window');}
+              </script>
+              <form onsubmit="doSearch82(this.Search82.value); return false;">
+              <input type="text" name="Search82" size="30" placeholder="Business" value="" />
+              <input type="submit" style="width:140px" value="Layoffs" /></form>
+       <br>
+
+
+
+
+   <!-- Page Content --></div>
+       <!-- /.container-fluid -->
+    <h4>Additional Resources </h4>
+    <div>
+      <div>
+        <div>
+          
+         
+            <p><a target="_blank" href="https://www.crunchbase.com/">Crunchbase</a> Great site to search information about a company.</p>
+            
+            <p><a target="_blank" href="https://offshoreleaks.icij.org/">Offshore Leaks</a> Find out who’s behind more than 810,000 offshore companies, foundations and trusts from the Pandora Papers, Paradise Papers, Bahamas Leaks, Panama Papers and Offshore Leaks investigations</p>
+
+            <p><a target="_blank" href="https://lumendatabase.org/">Lumen Database</a> The Lumen database collects and analyzes legal complaints and requests for removal of online materials, helping Internet users to know their rights and understand the law. These data enable us to study the prevalence of legal threats and let Internet users see the source of content removals. </p>
+            <p><a target="_blank" href="https://smallseotools.com/plagiarism-checker/">Plagiarism Checker</a> Check a URL to see if any other sites are copying your text.</p>
+            <p><a target="_blank" href="https://www.sec.gov/search-filings">SEC</a> Search Filings.</p>
+            <p><a target="_blank" href="https://www.ripoffreport.com/">Ripoff Report</a> Look for scams by companies</p>
+            
+          
+
+  
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- /.content-wrapper -->
+
+</ol>
+  <!-- /#wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+
+
+  <!-- Bootstrap core JavaScript-->
+<script src="js/jquery.min.js"></script>
+  <!-- <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+<script src="js/bootstrap.bundle.min.js"></script>
+
+  
+
+  
+</div>
+
+</body>
+</html>

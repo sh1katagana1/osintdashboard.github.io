@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Sh1katagana1 OSINT Dashboard</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Page level plugin CSS-->
+  <!-- <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet"> -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <style type="text/css">
+  @import url("css/sb-admin.min.css");
+  </style>
+</head>
+
+<body id="page-top">
+
+<nav class="navbar navbar-expand navbar-dark bg-dark static-top"><a class="navbar-brand mr-1" href="index.html">Sh1katagana1 OSINT Dashboard</a><img src="Files/logo.png" class="logobottom2" alt="Placeholder image">
+
+</nav>
+
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="sidebar navbar-nav">
+      <li class="nav-item"> <a class="nav-link" href="Search.html"><em class="fas fa-search-plus"></em><span>Search</span></a> </li>
+      <li class="nav-item"> <a class="nav-link" href="Email.html"> <em class="far fa-envelope"></em> <span>Email</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Username.html"> <em class="far fa-id-card"></em> <span>Username</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Name.html"> <em class="fas fa-file-signature"></em> <span>Name</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Telephone.html"> <em class="fas fa-phone"></em> <span>Telephone</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Twitter.html"> <em class="fab fa-twitter"></em> <span>Twitter</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Instagram.html"> <em class="fab fa-instagram"></em> <span>Instagram</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Communities.html"> <em class="fab fa-reddit-square"></em> <span>Communities</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Linkedin.html"> <em class="fab fa-linkedin"></em> <span>LinkedIn</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Domain.html"> <em class="fas fa-globe"></em> <span>Domain</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="IP.html"> <em class="fas fa-terminal"></em> <span>IP</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Videos.html"> <em class="fab fa-youtube"></em> <span>Videos</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Images.html"> <em class="fas fa-image"></em> <span>Images</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Documents.html"> <em class="fas fa-file-alt"></em> <span>Documents</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Pastes.html"> <em class="fas fa-receipt"></em> <span>Pastes</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Business.html"> <em class="far fa-building"></em> <span>Business & Government</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Location.html"> <em class="fas fa-map-marked-alt"></em> <span>Maps & Location</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Currencies.html"> <em class="fab fa-btc"></em> <span>Currencies</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Breaches.html"> <em class="fas fa-user-secret"></em> <span>Breaches</span></a></li>
+    </ul>
+
+
+<!-- Breadcrumbs-->
+<ol class="breadcrumb">
+  <h4 class="text-center">Image Search Tools</h4><br>
+
+    <div id="content-wrapper">
+
+      <div class="container-fluid">
+
+         <!-- <p>Coming Soon - Under Construction </p> -->
+
+
+<!--
+
+         <script type="text/javascript">
+         function doall(all){
+         window.open('https://www.google.com/searchbyimage?site=search&sa=X&image_url=' + Search01, 'Search01window');
+         window.open('https://www.bing.com/images/search?view=detailv2&iss=sbi&q=imgurl:' + Search02, 'Search02window');
+         window.open('http://www.tineye.com/search/?url=' + Search03, 'Search03window');
+         window.open('https://yandex.com/images/search?rpt=imageview&url=' + Search04, 'Search04window');
+         window.open('https://graph.baidu.com/upload?image=' + Search05, 'Search05window');
+         
+
+         }
+
+       </script>
+         <form onsubmit="doall(this.all.value); return false;">
+         <input type="text" id="Search99" name="all" size="30" placeholder="Entire Image URL" value="" />
+         <input type="submit" style="width:140px" value="⚡️ Submit All" />
+         </form><br />
+-->
+
+<p class="card-text">
+  Reverse Image Search:
+<script type="text/javascript">
+function doSearch01(Search01)
+{window.open('https://www.google.com/searchbyimage?site=search&sa=X&image_url=' + Search01, 'Search01window');}
+</script>
+<form onsubmit="doSearch01(this.Search01.value); return false;">
+<input type="text" name="Search01" size="30" placeholder="Entire Image URL" />
+<input type="submit" style="width:140px" value="Google" /><br></form>
+<script type="text/javascript">
+function doSearch02(Search02)
+{window.open('https://www.bing.com/images/search?view=detailv2&iss=sbi&q=imgurl:' + Search02, 'Search02window');}
+</script>
+<form onsubmit="doSearch02(this.Search02.value); return false;">
+<input type="text" name="Search02" size="30" placeholder="Entire Image URL" />
+<input type="submit" style="width:140px" value="Bing" /><br></form>
+<script type="text/javascript">
+function doSearch03(Search03)
+{window.open('http://www.tineye.com/search/?url=' + Search03, 'Search03window');}
+</script>
+<form onsubmit="doSearch03(this.Search03.value); return false;">
+<input type="text" name="Search03" size="30" placeholder="Entire Image URL" />
+<input type="submit" style="width:140px" value="TinEye" /><br></form>
+<script type="text/javascript">
+function doSearch04(Search04)
+{window.open('https://yandex.com/images/search?rpt=imageview&url=' + Search04, 'Search04window');}
+</script>
+<form onsubmit="doSearch04(this.Search04.value); return false;">
+<input type="text" name="Search04" size="30" placeholder="Entire Image URL" />
+<input type="submit" style="width:140px" value="Yandex" /><br></form>
+<script type="text/javascript">
+function doSearch05(Search05)
+{window.open('https://facecheck.id/#url=' + Search05, 'Search05window');}
+</script>
+<form onsubmit="doSearch05(this.Search05.value); return false;">
+<input type="text" name="Search05" size="30" placeholder="Entire Image URL" />
+<input type="submit" style="width:140px" value="FaceCheck" /><br></form>
+<script type="text/javascript">
+
+function doimage(image)
+{window.open('https://www.google.com/searchbyimage?site=search&sa=X&image_url=' + image, 'image1window');
+window.open('https://www.bing.com/images/search?view=detailv2&iss=sbi&q=imgurl:' + image, 'image2window');
+window.open('http://www.tineye.com/search/?url=' + image, 'image3window');
+window.open('https://yandex.com/images/search?rpt=imageview&url=' + image, 'image4window');
+window.open('https://facecheck.id/#url=' + image, 'image5window');
+window.open('https://karmadecay.com/search?q=' + image, 'image6window');}
+</script>
+<form onsubmit="doimage(this.image.value); return false;">
+<input type="text" name="image" size="30" placeholder="Entire Image URL" />
+<input type="submit" style="width:140px" value="Submit All" /><br><br></form>
+Images Search:
+<script type="text/javascript">
+function doPopAll(PopAll)
+{var pop = document.getElementById("PopAll");
+for (j = 1; j <= 100; j++){
+if (j < 10){
+j = "0" + j.toString();}
+else {j = j.toString();}
+console.log(j)
+item = document.getElementById("Search" + j);
+if (item != null){
+item.value = pop.value;}}}
+</script>
+<form onsubmit="doPopAll(this.PopAll.value); return false;">
+<input type="text" id="PopAll" name="PopAll" size="30" placeholder="Search Terms" />
+<input type="submit" style="width:140px" value="Populate All" /><br></form><br>
+<script type="text/javascript">
+function doSearch07(Search07)
+{window.open('https://www.google.com/search?q=' + Search07 + '&tbm=isch', 'Search07window');}
+</script>
+<form onsubmit="doSearch07(this.Search07.value); return false;">
+<input type="text" id="Search07" name="Search07" size="30" placeholder="Search Terms" />
+<input type="submit" style="width:140px" value="Google Images" /><br></form>
+<script type="text/javascript">
+function doSearch08(Search08)
+{window.open('https://www.bing.com/images/search?q=' + Search08, 'Search08window');}
+</script>
+<form onsubmit="doSearch08(this.Search08.value); return false;">
+<input type="text" id="Search08" name="Search08" size="30" placeholder="Search Terms" />
+<input type="submit" style="width:140px" value="Bing Images" /><br></form>
+<script type="text/javascript">
+function doSearch09(Search09)
+{window.open('https://yandex.com/images/search?text=' + Search09, 'Search09window');}
+</script>
+<form onsubmit="doSearch09(this.Search09.value); return false;">
+<input type="text" id="Search09" name="Search09" size="30" placeholder="Search Terms" />
+<input type="submit" style="width:140px" value="Yandex Images" /><br></form>
+<script type="text/javascript">
+function doSearch10(Search10)
+{window.open('https://twitter.com/search?q=' + Search10 + '&f=image', 'Search10window');}
+</script>
+<form onsubmit="doSearch10(this.Search10.value); return false;">
+<input type="text" id="Search10" name="Search10" size="30" placeholder="Search Terms" />
+<input type="submit" style="width:140px" value="Twitter Images" /><br></form>
+<script type="text/javascript">
+function doSearch11(Search11)
+{window.open('https://www.facebook.com/search/photos/?q=' + Search11, 'Search11window');}
+</script>
+<form onsubmit="doSearch11(this.Search11.value); return false;">
+<input type="text" id="Search11" name="Search11" size="30" placeholder="Search Terms" />
+<input type="submit" style="width:140px" value="Facebook Images" /><br></form>
+<script type="text/javascript">
+function doSearch12(Search12)
+{window.open('https://www.google.com/search?tbm=isch&q=site%3Ainstagram.com+' + Search12, 'Search12window');}
+</script>
+<form onsubmit="doSearch12(this.Search12.value); return false;">
+<input type="text" id="Search12" name="Search12" size="30" placeholder="Search Terms" value="" />
+<input type="submit" style="width:140px" value="Instagram Images" /><br></form>
+<script type="text/javascript">
+function doSearch13(Search13)
+{window.open('https://www.google.com/search?tbm=isch&q=site%3Alinkedin.com+' + Search13, 'Search13window');}
+</script>
+<form onsubmit="doSearch13(this.Search13.value); return false;">
+<input type="text" id="Search13" name="Search13" size="30" placeholder="Search Terms" value="" />
+<input type="submit" style="width:140px" value="LinkedIn Images" /><br></form>
+<script type="text/javascript">
+function doSearch14(Search14)
+{window.open('https://www.flickr.com/search/?text=' + Search14, 'Search14window');}
+</script>
+<form onsubmit="doSearch14(this.Search14.value); return false;">
+<input type="text" id="Search14" name="Search14" size="30" placeholder="Search Terms" />
+<input type="submit" style="width:140px" value="Flickr Images" /><br></form>
+<script type="text/javascript">
+function doSearch15(Search15)
+{window.open('https://www.tumblr.com/search/' + Search15, 'Search15window');}
+</script>
+<form onsubmit="doSearch15(this.Search15.value); return false;">
+<input type="text" id="Search15" name="Search15" size="30" placeholder="Search Terms" />
+<input type="submit" style="width:140px" value="Tumblr Images" /><br></form><br>
+<script type="text/javascript">
+function doSearch16(Search16)
+{window.open('https://www.google.com/search?q=' + Search16 + '&tbm=isch', 'image1window');
+window.open('https://www.bing.com/images/search?q=' + Search16, 'image2window');
+window.open('https://yandex.com/images/search?text=' + Search16, 'image3window');
+window.open('https://twitter.com/search?f=image&q=' + Search16, 'image4window');
+window.open('https://www.facebook.com/search/photos/?q=' + Search16, 'image5window');
+window.open('https://www.google.com/search?tbm=isch&q=site%3Ainstagram.com+' + Search16, 'image6window');
+window.open('https://www.google.com/search?tbm=isch&q=site%3Alinkedin.com+' + Search16, 'image7window');
+window.open('https://www.flickr.com/search/?text=' + Search16, 'image8window');
+window.open('https://www.tumblr.com/search/' + Search16, 'Search9window');}
+</script>
+<form onsubmit="doSearch16(this.Search16.value); return false;">
+<input type="text" id="Search16" name="Search16" size="30" placeholder="Search Terms" />
+<input type="submit" style="width:140px" value="Submit All" /><br><br></form>
+Flickr API:
+<script type="text/javascript">
+function doflemail(flemail)
+{window.open('https://api.flickr.com/services/rest/?method=flickr.people.findByEmail&api_key=27c196593dad58382fc4912b00cf1194&find_email=' + flemail, 'flickremailwindow');}
+</script>
+<form onSubmit="doflemail(this.flemail.value); return false;">
+<input name="flemail" size="30" placeholder="Email Address" type="text" />
+<input type="submit" style="width:140px" value="Email Search" /></form>
+<script type="text/javascript">
+function dofluser(fluser)
+{window.open('https://api.flickr.com/services/rest/?method=flickr.people.findByUsername&api_key=27c196593dad58382fc4912b00cf1194&username=' + fluser, 'flickruserwindow');}
+</script>
+<form onSubmit="dofluser(this.fluser.value); return false;">
+<input name="fluser" size="30" placeholder="Username" type="text" />
+<input type="submit" style="width:140px" value="Username Search" /></form>
+<script type="text/javascript">
+function doflnumber(flnumber)
+{window.open('https://api.flickr.com/services/rest/?method=flickr.people.getInfo&api_key=27c196593dad58382fc4912b00cf1194&user_id=' + flnumber + '&format=rest', 'flickrnumberwindow');}
+</script>
+<form onSubmit="doflnumber(this.flnumber.value); return false;">
+<input name="flnumber" size="30" placeholder="User Number" type="text" />
+<input type="submit" style="width:140px" value="User # Search" /></form>
+
+         <br>
+
+   <!-- Page Content --></div>
+       <p><!-- /.container-fluid -->
+         <b>Additional Resources </b></p>
+       <div>
+         <div>
+           <div>
+             
+             <p><strong>Utilizing Images During  Investigations</strong></p>
+             <p>Here are a few  typical use cases for image analysis during an OSINT investigation:</p>
+             <ol type="1">
+               <li value="1">Image Search – Search using       keywords to quickly scan pages of images that may indicate pertinent sites</li>
+               <li>Reverse Image – locating       other instances of that image on the internet in order to locate other       accounts and pages associated with your target</li>
+               <li>Image Metadata – Recover exif       data from images that may indicate the source or contain other clues as to       person or device that captured/generated the image</li>
+               <li>Identify Fakes – detect and       identify modified/altered images that may have been used to commit fraud       or obscure the identity of a target</li>
+               <li>Undercover Accounts –       defensive analysis for our own accounts and communications             </li>
+             </ol>
+             <p>&nbsp;</p>
+             <p><strong>Image Search Sites</strong></p>
+             <p><a target="_blank" rel="noopener noreferrer" href="https://pimeyes.com/en">https://pimeyes.com/en</a> | Primeyes Facial Recognition (<strong>excellent resource</strong>)</p>
+             <p><a target="_blank" rel="noopener noreferrer" href="https://karmadecay.com">https://karmadecay.com</a> | Karma Decay</p>
+             <p><a target="_blank" rel="noopener noreferrer" href="https://rootabout.com">https://rootabout.com</a> | Root About             </p>
+             <p><a target="_blank" rel="noopener noreferrer" href="http://pictriev.com">http://pictriev.com</a> | Pictriev</p>
+             <p><a target="_blank" rel="noopener noreferrer" href="https://flickr.com">https://flickr.com</a> | Flickr</p>
+             <p><a target="_blank" rel="noopener noreferrer" href="https://flickr.com/map">https://flickr.com/map</a> | Flickr Map</p>
+             <p><a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/services/api">https://www.flickr.com/services/api</a> | Flickr API Key</p>
+             <p>&nbsp;</p>
+             <p><strong>Exif Data  &amp;&nbsp;Forensics&nbsp;</strong></p>
+             <!-- <p><a target="_blank" rel="noopener noreferrer" href="http://exif.regex.info/exif.cgi">http://exif.regex.info/exif.cgi</a> |  Jeffery&rsquo;s Exif Viewer</p> -->
+             <p><a target="_blank" rel="noopener noreferrer" href="https://exifdata.com/">https://exifdata.com/</a> |   Online Exif Viewer</p>
+             <p><a target="_blank" rel="noopener noreferrer" href="https://exiftool.org/">https://exiftool.org/</a>|&nbsp;ExifInfo</p>
+             <p><a target="_blank" rel="noopener noreferrer" href="http://www.cameratrace.com/">http://www.cameratrace.com/</a> | Camera  Trace</p>
+             <p><a target="_blank" rel="noopener noreferrer" href="https://online-barcode-reader.inliteresearch.com/">https://online-barcode-reader.inliteresearch.com/</a> | Online Barcode Reader</p>
+             <p><a target="_blank" rel="noopener noreferrer" href="https://fotoforensics.com">https://fotoforensics.com</a> | Foto Forensics</p>
+             <p><a target="_blank" rel="noopener noreferrer" href="https://29a.ch/photo-forensics">https://29a.ch/photo-forensics</a> |  Forensically</p>
+             <p>&nbsp;</p>
+             <p><strong>Resources – Sites and  Software (ill complete the rest of the doc)</strong></p>
+
+             <p><a target="_blank" rel="noopener noreferrer" href="https://chrome.google.com/webstore/detail/search-by-image/cnojnbdhbhnkbcieeekonklommdnndci">https://chrome.google.com/webstore/detail/search-by-image/cnojnbdhbhnkbcieeekonklommdnndci</a> |Across all major search engines</p>
+             <p><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=tUZgEgmr0Vs&feature=youtu.be">https://www.youtube.com/watch?v=tUZgEgmr0Vs&amp;feature=youtu.be</a> | Search google images by face tutorial #osint</p>
+             <p><a target="_blank" rel="noopener noreferrer" href="https://chrome.google.com/webstore/detail/reveye-reverse-image-sear/keaaclcjhehbbapnphnmpiklalfhelgf?hl=en">https://chrome.google.com/webstore/detail/reveye-reverse-image-sear/keaaclcjhehbbapnphnmpiklalfhelgf?hl=en</a> | Reverse Extension Chrome</p>
+             <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/s0md3v/Dump/blob/master/static/filename-fingerprinting.md">https://github.com/s0md3v/Dump/blob/master/static/filename-fingerprinting.md</a> | Filename Fingerprinting</p>
+             <p><a target="_blank" rel="noopener noreferrer" href="https://exiftool.org/">https://exiftool.org/</a> | Exif Tool</p>
+             <p><a target="_blank" rel="noopener noreferrer" href="https://www.aware-online.com/en/email-to-flickr-account-part2/">https://www.aware-online.com/en/email-to-flickr-account-part2/</a> | Email to Flikr Tutorial</p>
+           </div>
+         </div>
+       </div>
+<p>&nbsp;</p>
+    </div>
+    <!-- /.content-wrapper -->
+
+</div>
+  <!-- /#wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+
+
+  <!-- Bootstrap core JavaScript-->
+<script src="js/jquery.min.js"></script>
+  <!-- <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+<script src="js/bootstrap.bundle.min.js"></script>
+
+  
+
+  
+</body>
+
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Sh1katagana1 OSINT Dashboard</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Page level plugin CSS-->
+  <!-- <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet"> -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <style type="text/css">
+    @import url("css/sb-admin.min.css");
+  </style>
+</head>
+
+<body id="page-top">
+
+<nav class="navbar navbar-expand navbar-dark bg-dark static-top"><a class="navbar-brand mr-1" href="index.html">Sh1katagana1 OSINT Dashboard</a><img src="Files/logo.png" class="logobottom2" alt="Placeholder image">
+
+</nav>
+
+  <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="sidebar navbar-nav">
+          <li class="nav-item"> <a class="nav-link" href="Search.html"><em class="fas fa-search-plus"></em><span>Search</span></a> </li>
+      <li class="nav-item"> <a class="nav-link" href="Email.html"> <em class="far fa-envelope"></em> <span>Email</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Username.html"> <em class="far fa-id-card"></em> <span>Username</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Name.html"> <em class="fas fa-file-signature"></em> <span>Name</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Telephone.html"> <em class="fas fa-phone"></em> <span>Telephone</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Twitter.html"> <em class="fab fa-twitter"></em> <span>Twitter</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Instagram.html"> <em class="fab fa-instagram"></em> <span>Instagram</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Communities.html"> <em class="fab fa-reddit-square"></em> <span>Communities</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Linkedin.html"> <em class="fab fa-linkedin"></em> <span>LinkedIn</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Domain.html"> <em class="fas fa-globe"></em> <span>Domain</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="IP.html"> <em class="fas fa-terminal"></em> <span>IP</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Videos.html"> <em class="fab fa-youtube"></em> <span>Videos</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Images.html"> <em class="fas fa-image"></em> <span>Images</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Documents.html"> <em class="fas fa-file-alt"></em> <span>Documents</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Pastes.html"> <em class="fas fa-receipt"></em> <span>Pastes</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Business.html"> <em class="far fa-building"></em> <span>Business & Government</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Location.html"> <em class="fas fa-map-marked-alt"></em> <span>Maps & Location</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Currencies.html"> <em class="fab fa-btc"></em> <span>Currencies</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Breaches.html"> <em class="fas fa-user-secret"></em> <span>Breaches</span></a></li>
+        </ul>
+
+
+<!-- Breadcrumbs-->
+<ol class="breadcrumb">
+  <h4 class="text-center">Video Search Tools</h4><br>
+
+    <div id="content-wrapper">
+      <div class="container-fluid">
+
+        <!-- <form onsubmit="popAll(this.PopAll.value); return false;">
+          <input type="text" id="PopAll" name="PopAll" size="30" placeholder="YouTube Video ID" />
+          <input type="submit" style="width:140px" value="⇣ Populate All" /><br />
+        </form>
+        <br> -->
+
+        <script type="text/javascript">
+          function doSearch01(Search01)
+          {window.open('https://keepvid.works/?url=https://www.youtube.com/watch/v=' + Search01, 'Search01window');}
+          </script>
+          <form onsubmit="doSearch01(this.Search01.value); return false;">
+          <input type="text" id="Search01" name="Search01" size="30" placeholder="YouTube Video ID" />
+          <input type="submit" style="width:140px" value="Age Bypass" /><br></form>
+          <script type="text/javascript">
+          function doSearch02(Search02)
+          {window.open('https://www.youtube.com/embed/' + Search02, 'Search02window');}
+          </script>
+          <form onsubmit="doSearch02(this.Search02.value); return false;">
+          <input type="text" id="Search02" name="Search02" size="30" placeholder="YouTube Video ID" />
+          <input type="submit" style="width:140px" value="Full Screen" /><br></form>
+          <script type="text/javascript">
+          function doSearch03(Search03)
+          {window.open('https://i.ytimg.com/vi/' + Search03 + '/maxresdefault.jpg', 'Search03window');}
+          </script>
+          <form onsubmit="doSearch03(this.Search03.value); return false;">
+          <input type="text" id="Search03" name="Search03" size="30" placeholder="YouTube Video ID" />
+          <input type="submit" style="width:140px" value="Thumbnail HQ" /><br></form>
+          <script type="text/javascript">
+          function doSearch04(Search04)
+          {window.open('https://img.youtube.com/vi/' + Search04 + '/1.jpg', 'Search04window');}
+          </script>
+          <form onsubmit="doSearch04(this.Search04.value); return false;">
+          <input type="text" id="Search04" name="Search04" size="30" placeholder="YouTube Video ID" />
+          <input type="submit" style="width:140px" value="Thumbnail 2" /><br></form>
+          <script type="text/javascript">
+          function doSearch05(Search05)
+          {window.open('https://img.youtube.com/vi/' + Search05 + '/2.jpg', 'Search05window');}
+          </script>
+          <form onsubmit="doSearch05(this.Search05.value); return false;">
+          <input type="text" id="Search05" name="Search05" size="30" placeholder="YouTube Video ID" />
+          <input type="submit" style="width:140px" value="Thumbnail 3" /><br></form>
+          <script type="text/javascript">
+          function doSearch06(Search06)
+          {window.open('https://img.youtube.com/vi/' + Search06 + '/3.jpg', 'Search06window');}
+          </script>
+          <form onsubmit="doSearch06(this.Search06.value); return false;">
+          <input type="text" id="Search06" name="Search06" size="30" placeholder="YouTube Video ID" />
+          <input type="submit" style="width:140px" value="Thumbnail 4" /><br></form>
+          <script type="text/javascript">
+          function doSearch07(Search07)
+          {window.open('https://www.google.com/searchbyimage?site=search&sa=X&image_url=https://i.ytimg.com/vi/' + Search07 + '/maxresdefault.jpg', 'Search07window');}
+          </script>
+          <form onsubmit="doSearch07(this.Search07.value); return false;">
+          <input type="text" id="Search07" name="Search07" size="30" placeholder="YouTube Video ID" />
+          <input type="submit" style="width:140px" value="Google Reverse" /><br></form>
+          <script type="text/javascript">
+          function doSearch08(Search08)
+          {window.open('https://www.bing.com/images/search?view=detailv2&iss=sbi&q=imgurl:https://i.ytimg.com/vi/' + Search08 + '/maxresdefault.jpg', 'Search08window');}
+          </script>
+          <form onsubmit="doSearch08(this.Search08.value); return false;">
+          <input type="text" id="Search08" name="Search08" size="30" placeholder="YouTube Video ID" />
+          <input type="submit" style="width:140px" value="Bing Reverse" /><br></form>
+          <script type="text/javascript">
+          function doSearch09(Search09)
+          {window.open('https://yandex.com/images/search?rpt=imageview&url=https://i.ytimg.com/vi/' + Search09 + '/maxresdefault.jpg', 'Search09window');}
+          </script>
+          <form onsubmit="doSearch09(this.Search09.value); return false;">
+          <input type="text" id="Search09" name="Search09" size="30" placeholder="YouTube Video ID" />
+          <input type="submit" style="width:140px" value="Yandex Reverse" /><br></form>
+          <script type="text/javascript">
+          function doSearch10(Search10)
+          {window.open('http://www.tineye.com/search/?url=https://i.ytimg.com/vi/' + Search10 + '/maxresdefault.jpg', 'Search10window');}
+          </script>
+          <form onsubmit="doSearch10(this.Search10.value); return false;">
+          <input type="text" id="Search10" name="Search10" size="30" placeholder="YouTube Video ID" />
+          <input type="submit" style="width:140px" value="TinEye Reverse" /><br></form>
+          <script type="text/javascript">
+          function doSearch11(Search11)
+          {window.open('http://polsy.org.uk/stuff/ytrestrict.cgi?ytid=' + Search11, 'Search11window');}
+          </script>
+          <form onsubmit="doSearch11(this.Search11.value); return false;">
+          <input type="text" id="Search11" name="Search11" size="30" placeholder="YouTube Video ID" />
+          <input type="submit" style="width:140px" value="Restrictions I" /><br></form>
+          <script type="text/javascript">
+          function doSearch12(Search12)
+          {window.open('https://watannetwork.com/tools/blocked/#url=' + Search12, 'Search12window');}
+          </script>
+          <form onsubmit="doSearch12(this.Search12.value); return false;">
+          <input type="text" id="Search12" name="Search12" size="30" placeholder="YouTube Video ID" />
+          <input type="submit" style="width:140px" value="Restrictions II" /><br></form>
+          <script type="text/javascript">
+          function doSearch13(Search13)
+          {window.open('https://www.googleapis.com/youtube/v3/videos?id=' + Search13 + '&part=snippet,statistics,recordingDetails&key=AIzaSyDNALbuV1FZSRy6JpafwUaV_taSVV12wZw', 'Search13window');}
+          </script>
+          <form onsubmit="doSearch13(this.Search13.value); return false;">
+          <input type="text" id="Search13" name="Search13" size="30" placeholder="YouTube Video ID" />
+          <input type="submit" style="width:140px" value="Metadata" /><br></form>
+          <script type="text/javascript">
+          function doSearch14(Search14)
+          {window.open('http://www.pwnyoutube.com/watch?v=' + Search14, 'Search14window');}
+          </script>
+          <form onsubmit="doSearch14(this.Search14.value); return false;">
+          <input type="text" id="Search14" name="Search14" size="30" placeholder="YouTube Video ID" />
+          <input type="submit" style="width:140px" value="Download" /><br></form>
+          <script type="text/javascript">
+          function doSearch15(Search15)
+          {window.open('https://web.archive.org/web/https://www.youtube.com/watch?v=' + Search15, 'Search15window');}
+          </script>
+          <form onsubmit="doSearch15(this.Search15.value); return false;">
+          <input type="text" id="Search15" name="Search15" size="30" placeholder="YouTube Video ID" />
+          <input type="submit" style="width:140px" value="Archives" /><br></form><br>
+          <script type="text/javascript">
+          function doSearch16(Search16)
+          {window.open('https://www.google.com/search?tbm=vid&q=' + Search16, 'Search16window');}
+          </script>
+          <form onsubmit="doSearch16(this.Search16.value); return false;">
+          <input type="text" name="Search16" size="30" placeholder="Search Terms" />
+          <input type="submit" style="width:140px" value="Google Videos" /><br></form>
+          <script type="text/javascript">
+          function doSearch17(Search17)
+          {window.open('https://www.bing.com/videos/search?q=' + Search17, 'Search17window');}
+          </script>
+          <form onsubmit="doSearch17(this.Search17.value); return false;">
+          <input type="text" name="Search17" size="30" placeholder="Search Terms" />
+          <input type="submit" style="width:140px" value="Bing Videos" /><br></form>
+          <script type="text/javascript">
+          function doSearch18(Search18)
+          {window.open('https://yandex.ru/video/search?text=' + Search18 + '&rpt=imageview', 'Search18window');}
+          </script>
+          <form onsubmit="doSearch18(this.Search18.value); return false;">
+          <input type="text" name="Search18" size="30" placeholder="Search Terms" />
+          <input type="submit" style="width:140px" value="Yandex Videos" /><br></form>
+          <script type="text/javascript">
+          function doSearch19(Search19)
+          {window.open('https://www.youtube.com/results?search_query=' + Search19, 'Search19window');}
+          </script>
+          <form onsubmit="doSearch19(this.Search19.value); return false;">
+          <input type="text" name="Search19" size="30" placeholder="Search Terms" />
+          <input type="submit" style="width:140px" value="YouTube Videos" /><br></form>
+          <script type="text/javascript">
+          function doSearch20(Search20)
+          {window.open('https://twitter.com/search?q=' + Search20 + '&f=video', 'Search20window');}
+          </script>
+          <form onsubmit="doSearch20(this.Search20.value); return false;">
+          <input type="text" name="Search20" size="30" placeholder="Search Terms" />
+          <input type="submit" style="width:140px" value="Twitter Videos" /><br></form>
+          <script type="text/javascript">
+          function doSearch21(Search21)
+          {window.open('https://www.facebook.com/search/videos/?q=' + Search21, 'Search21window');}
+          </script>
+          <form onsubmit="doSearch21(this.Search21.value); return false;">
+          <input type="text" name="Search21" size="30" placeholder="Search Terms" />
+          <input type="submit" style="width:140px" value="Facebook Videos" /><br></form>
+          <script type="text/javascript">
+          function doSearch22(Search22)
+          {window.open('https://www.reddit.com/search?q=site:v.redd.it%20AND%20' + Search22, 'Search22window');}
+          </script>
+          <form onsubmit="doSearch22(this.Search22.value); return false;">
+          <input type="text" name="Search22" size="30" placeholder="Search Terms" />
+          <input type="submit" style="width:140px" value="Reddit Videos" /><br></form>
+          <script type="text/javascript">
+          function doSearch23(Search23)
+          {window.open('https://www.tiktok.com/tag/' + Search23, 'Search23window');}
+          </script>
+          <form onsubmit="doSearch23(this.Search23.value); return false;">
+          <input type="text" name="Search23" size="30" placeholder="Hashtag" />
+          <input type="submit" style="width:140px" value="TikTok Videos" /><br></form>
+          <script type="text/javascript">
+          function doSearch24(Search24)
+          {window.open('https://www.peteyvid.com/index.php?q=' + Search24, 'Search24window');}
+          </script>
+          <form onsubmit="doSearch24(this.Search24.value); return false;">
+          <input type="text" name="Search24" size="30" placeholder="Search Terms" />
+          <input type="submit" style="width:140px" value="PeteyVid" /><br></form>
+          <script type="text/javascript">
+          function doSearch25(Search25)
+          {window.open('https://archive.org/details/movies?and[]=' + Search25, 'Search25window');}
+          </script>
+          <form onsubmit="doSearch25(this.Search25.value); return false;">
+          <input type="text" name="Search25" size="30" placeholder="Search Terms" />
+          <input type="submit" style="width:140px" value="Archives I" /><br></form>
+          <script type="text/javascript">
+          function doSearch26(Search26)
+          {window.open('https://archive.org/details/opensource_movies?and%5B%5D=' + Search26, 'Search26window');}
+          </script>
+          <form onsubmit="doSearch26(this.Search26.value); return false;">
+          <input type="text" name="Search26" size="30" placeholder="Search Terms" />
+          <input type="submit" style="width:140px" value="Archives II" /><br></form>
+          <script type="text/javascript">
+          function doSearch27(Search27)
+          {window.open('https://archive.org/details/tv?q=' + Search27, 'Search27window');}
+          </script>
+          <form onsubmit="doSearch27(this.Search27.value); return false;">
+          <input type="text" name="Search27" size="30" placeholder="Search Terms" />
+          <input type="submit" style="width:140px" value="TV Archives" /><br></form><br>
+          <script type="text/javascript">
+          function doSearch28(Search28)
+          {window.open('https://www.google.com/searchbyimage?site=search&sa=X&image_url=http://i.ytimg.com/vi/' + Search28 + '/0.jpg', 'rev13window');
+          window.open('https://www.google.com/searchbyimage?site=search&sa=X&image_url=http://i.ytimg.com/vi/' + Search28 + '/1.jpg', 'rev14window');
+          window.open('https://www.google.com/searchbyimage?site=search&sa=X&image_url=http://i.ytimg.com/vi/' + Search28 + '/2.jpg', 'rev15window');
+          window.open('https://www.google.com/searchbyimage?site=search&sa=X&image_url=http://i.ytimg.com/vi/' + Search28 + '/3.jpg', 'rev16window');
+          window.open('http://www.tineye.com/search/?url=http://i.ytimg.com/vi/' + Search28 + '/0.jpg', 'revt5window');
+          window.open('http://www.tineye.com/search/?url=http://i.ytimg.com/vi/' + Search28 + '/1.jpg', 'revt6window');
+          window.open('http://www.tineye.com/search/?url=http://i.ytimg.com/vi/' + Search28 + '/2.jpg', 'revt7window');
+          window.open('http://www.tineye.com/search/?url=http://i.ytimg.com/vi/' + Search28 + '/3.jpg', 'revt8window');
+          window.open('https://yandex.com/images/search?source=collections&&url=http://i.ytimg.com/vi/' + Search28 + '/0.jpg&rpt=imageview', 'rev17window');
+          window.open('https://yandex.com/images/search?source=collections&&url=http://i.ytimg.com/vi/' + Search28 + '/1.jpg&rpt=imageview', 'rev18window');
+          window.open('https://yandex.com/images/search?source=collections&&url=http://i.ytimg.com/vi/' + Search28 + '/2.jpg&rpt=imageview', 'rev19window');
+          window.open('https://yandex.com/images/search?source=collections&&url=http://i.ytimg.com/vi/' + Search28 + '/3.jpg&rpt=imageview', 'rev20window');
+          window.open('http://www.bing.com/images/searchbyimage?FORM=IRSBIQ&cbir=sbi&imgurl=http://i.ytimg.com/vi/' + Search28 + '/0.jpg', 'rev21window');
+          window.open('http://www.bing.com/images/searchbyimage?FORM=IRSBIQ&cbir=sbi&imgurl=http://i.ytimg.com/vi/' + Search28 + '/1.jpg', 'rev22window');
+          window.open('http://www.bing.com/images/searchbyimage?FORM=IRSBIQ&cbir=sbi&imgurl=http://i.ytimg.com/vi/' + Search28 + '/2.jpg', 'rev23window');
+          window.open('http://www.bing.com/images/searchbyimage?FORM=IRSBIQ&cbir=sbi&imgurl=http://i.ytimg.com/vi/' + Search28 + '/3.jpg', 'rev24window');}
+          </script>
+          <form onsubmit="doSearch28(this.Search28.value); return false;">
+          <input type="text" id="Search28" name="Search28" size="30" placeholder="YouTube Video ID" />
+          <input type="submit" style="width:140px" value="YouTube Reverse" /><br></form>
+          
+          <script type="text/javascript">
+          function doSearch29(Search29)
+          {window.open('https://www.google.com/searchbyimage?site=search&sa=X&image_url=https://i.vimeocdn.com/video/' + Search29, 'rev1window');
+          window.open('http://www.tineye.com/search/?url=https://i.vimeocdn.com/video/' + Search29, 'revt1window');
+          window.open('https://www.yandex.com/images/search?img_url=https://i.vimeocdn.com/video/' + Search29, 'rev5window');
+          window.open('http://www.bing.com/images/searchbyimage?FORM=IRSBIQ&cbir=sbi&imgurl=https://i.vimeocdn.com/video/' + Search29, 'rev9window');}
+          </script>
+          <form onsubmit="doSearch29(this.Search29.value); return false;">
+          <input type="text" id="Search29" name="Search29" size="30" placeholder="Vimeo Image URL" />
+          <input type="submit" style="width:140px" value="Vimeo Reverse" /><br></form>
+          
+          <script type="text/javascript">
+          function doSearch30(Search30)
+          {window.open('https://www.google.com/searchbyimage?site=search&sa=X&image_url=' + Search30, 'image1window');
+          window.open('http://www.bing.com/images/searchbyimage?FORM=IRSBIQ&cbir=sbi&imgurl=' + Search30, 'image4window');
+          window.open('http://www.tineye.com/search/?url=' + Search30, 'image2window');
+          window.open('https://yandex.com/images/search?url=' + Search30 + '&rpt=imageview', 'image3window');
+          window.open('https://image.baidu.com/pcdutu?queryImageUrl=' + Search30, 'image5window');}
+          </script>
+          <form onsubmit="doSearch30(this.Search30.value); return false;">
+          <input type="text" name="Search30" size="30" placeholder="Entire Image URL" />
+          <input type="submit" style="width:140px" value="General Reverse" /><br><br></form>
+          
+          <script type="text/javascript">
+          function doSearch31(Search31)
+          {window.open('https://www.youtube.com/user/' + Search31, 'Search31window');}
+          </script>
+          <form onsubmit="doSearch31(this.Search31.value); return false;">
+          <input type="text" name="Search31" size="30" placeholder="YouTube Username" />
+          <input type="submit" style="width:140px" value="Profile" /><br></form>
+          <script type="text/javascript">
+          function doSearch32(Search32)
+          {window.open('https://www.youtube.com/feeds/videos.xml?user=' + Search32, 'Search32window');}
+          </script>
+          <form onsubmit="doSearch32(this.Search32.value); return false;">
+          <input type="text" name="Search32" size="30" placeholder="YouTube Username" />
+          <input type="submit" style="width:140px" value="Account" /><br></form>
+          <script type="text/javascript">
+          function doSearch33(Search33)
+          {window.open('https://youtube.googleapis.com/youtube/v3/channels?part=snippet&id=' + Search33 + '&key=AIzaSyDNALbuV1FZSRy6JpafwUaV_taSVV12wZw', 'Search33window');}
+          </script>
+          <form onsubmit="doSearch33(this.Search33.value); return false;">
+          <input type="text" name="Search33" size="30" placeholder="YouTube Channel ID" />
+          <input type="submit" style="width:140px" value="Metadata" /><br></form>
+          <script type="text/javascript">
+          function doSearch34(Search34,term)
+          {window.open('https://www.googleapis.com/youtube/v3/commentThreads?part=id,snippet&videoId=' + Search34 + '&pageToken=&order=Relevance&maxResults=100&searchTerms=' + term + '&textFormat=plainText&key=AIzaSyDNALbuV1FZSRy6JpafwUaV_taSVV12wZw', 'Search34window');}
+          </script>
+          <form onsubmit="doSearch34(this.Search34.value,this.term.value); return false;">
+          <input type="text" name="Search34" size="17" placeholder="YouTube Video ID" />
+          <input type="text" name="term" size="10" placeholder="Search Term" />
+          <input type="submit" style="width:140px" value="Comments" /><br></form>
+
+         <br>
+
+   <!-- Page Content --></div>
+       <!-- /.container-fluid -->
+       <h4>Additional Resources </h4>
+       <div>
+         <div>
+           <div>
+               
+               <p><strong>Video Capture/Preservation</strong>               </p>
+               <div>
+                 <table border="1" cellpadding="0" cellspacing="0" valign="top" title="" summary="">
+                   <tr>
+                     <td><p><strong>Platform</strong></p></td>
+                     <td><p><strong>Static (Not Live)</strong></p></td>
+                     <td><p><strong>Live Streams</strong></p></td>
+                   </tr>
+                   <tr>
+                     <td><p>Youtube</p></td>
+                     <td><p>Bat File: ytdl.bat</p>
+                       <p>Extension: VDH (FF)</p></td>
+                     <td><p>Bat File:&nbsp;ytdl.bat</p>
+                       <p>Note: ctrl-c to stop the capture</p></td>
+                   </tr>
+                   <tr>
+                     <td><p>Twitch</p></td>
+                     <td><p>Bat File: ytdl.bat</p>
+                       <p>Extension: VDH (FF, Chrome)</p></td>
+                     <td><p>Bat File:&nbsp;ytdl.bat</p>
+                       <p>Note: ctrl-c to stop the capture</p></td>
+                   </tr>
+                   <tr>
+                     <td><p>Facebook</p></td>
+                     <td><p>Bat File: ytdl.bat</p>
+                       <p>Extension: VDH (FF, Chrome)</p></td>
+                     <td><p>VLC:&nbsp;Media &gt; Open Network Stream</p>
+                       <p>SLB: Use SD to find SLB stream URL</p>
+                       <p>Note:&nbsp;.mpd</p></td>
+                   </tr>
+                   <tr>
+                     <td><p>Instagram</p></td>
+                     <td><p>Bat File: ytdl.bat</p>
+                       <p>Extension: VDH (FF) IGD (Chrome)</p></td>
+                     <td><p>VLC:&nbsp;Media &gt; Open Network Stream</p>
+                       <p>SLB: Use SD to find SLB stream URL</p>
+                       <p>Note:&nbsp;.mpd</p></td>
+                   </tr>
+                   <tr>
+                     <td><p>Twitter &amp;     Periscope</p></td>
+                     <td><p>Bat File: ytdl.bat</p>
+                       <p>Extension: VDH (FF, Chrome)</p></td>
+                     <td><p>Bat File:&nbsp;ytdl.bat</p>
+                       <p>Note:&nbsp;ctrl-c to stop the capture</p></td>
+                   </tr>
+                   <tr>
+                     <td><p>Vimeo</p></td>
+                     <td><p>Bat File: ytdl.bat</p>
+                       <p>Extension: VDH (FF, Chrome)</p></td>
+                     <td><p>Bat File:&nbsp;ytdl.bat</p>
+                       <p>Note: ctrl-c to stop the capture</p></td>
+                   </tr>
+                   <tr>
+                     <td><p>TikTok</p></td>
+                     <td><p>Bat File: ytdl.bat</p>
+                       <p>Extension: VDH (FF, Chrome)</p></td>
+                     <td><p>Use an Emulator or Burner</p>
+                       <p>Capture:&nbsp;emulator or burner screen     recording</p></td>
+                   </tr>
+                   <tr>
+                     <td><p>ALL Platforms</p></td>
+                     <td><p>FF = Firefox</p>
+                       <p>VDH = <a target="_blank" rel="noopener noreferrer" href="https://www.downloadhelper.net/">Video Download Helper</a></p>
+                       <p>IGD = <a target="_blank" rel="noopener noreferrer" href="https://github.com/HuiiBuh/InstagramDownloader">Instagram     Downloader</a></p></td>
+                     <td><p>SD = <a target="_blank" rel="noopener noreferrer" href="https://addons.mozilla.org/en-US/firefox/addon/hls-stream-detector/">hls-stream-detector</a>&nbsp;</p>
+                       <p>VLC = <a target="_blank" rel="noopener noreferrer" href="https://www.videolan.org/vlc/download-windows.html">VLC Media Player</a></p>
+                       <p>SLB =&nbsp;Streamlink .bat file</p></td>
+                   </tr>
+                 </table>
+               </div>
+               <p>&nbsp;</p>
+               <blockquote>
+                 <p><strong>Recommended Tools</strong></p>
+               </blockquote>
+               <p>Recommended video   preservation tools for Windows users are listed here, but before you download   them individually and slog through the manual install process please read   section 1.3 for a better way to install most of them very quickly.</p>
+               <p><strong>Batch Files</strong>&nbsp;The provided &ldquo;capture&rdquo;   directory contains .bat files which are titled to match the chart in section   1.1. Feel free to further customize the scripts.&nbsp;</p>
+               <p><strong>Stream Detector</strong> Also known as   hls-stream-detector, is an extension for Firefox which attempts to identify   live video URLs. <a target="_blank" rel="noopener noreferrer" href="https://github.com/rowrawer/stream-detector/">https://github.com/rowrawer/stream-detector/</a> or <a target="_blank" rel="noopener noreferrer" href="https://addons.mozilla.org/en-US/firefox/addon/hls-stream-detector/">https://addons.mozilla.org/en-US/firefox/addon/hls-stream-detector/</a>&nbsp;</p>
+               <p><strong>Youtube-DL </strong>You will need Youtube-DL which is   included in the capture folder attached to this lesson. Use the exe version if   you are on windows and place it in the same directory where you plan to   download videos.</p>
+               <p>Windows: <a target="_blank" rel="noopener noreferrer" href="https://youtube-dl.org/downloads/latest/youtube-dl.exe">https://youtube-dl.org/downloads/latest/youtube-dl.exe</a>&nbsp;</p>
+               <p>Linux/Mac: <a target="_blank" rel="noopener noreferrer" href="http://ytdl-org.github.io/youtube-dl/download.html">http://ytdl-org.github.io/youtube-dl/download.html</a>&nbsp;</p>
+               <p><strong>FFMpeg</strong> You will need FFMpeg which is included   in this folder or downloadable at (extract and copy the contents of the bin   folder into your chosen directory)</p>
+               <p>Windows: <a target="_blank" rel="noopener noreferrer" href="https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z">https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z</a>&nbsp;</p>
+               <p><strong>VLC</strong>&nbsp;Great media player that uses FFMpeg   codecs and supports stream capture via the network stream and record   functions. Toggle on View &gt; Advanced Controls for the record button.</p>
+               <p>Windows: <a target="_blank" rel="noopener noreferrer" href="https://www.videolan.org/vlc/download-windows.html">https://www.videolan.org/vlc/download-windows.html</a>&nbsp;</p>
+               <p><strong>Streamlink</strong> Livestream capture only, remember   to hit ctrl-c to kill it and stop the download. With Streamlink we have the   Streamdetector extension generate the full command (not just the URL) via the   menu on the top right of the Streamdetector interface.</p>
+               <p>Windows: <a target="_blank" rel="noopener noreferrer" href="https://github.com/beardypig/streamlink-portable/releases/tag/1.7.0">https://github.com/beardypig/streamlink-portable/releases/tag/1.7.0</a>&nbsp;</p>
+               <p>Command Example:</p>
+               <p>F:\&gt;streamlink   -o filename.mp4 &nbsp;URL best</p>
+               <p><strong>ShareX</strong> - ShareX is our preferred screen   capture for Windows. Screen capture and recording is not as good as ripping   the data stream but is better than nothing.&nbsp;</p>
+               <p>Full version: <a target="_blank" rel="noopener noreferrer" href="https://getsharex.com/">https://getsharex.com/</a>&nbsp;</p>
+               <p>Portable Version: <a target="_blank" rel="noopener noreferrer" href="https://github.com/ShareX/ShareX/releases/download/v13.2.1/ShareX-portable.zip">https://github.com/ShareX/ShareX/releases/download/v13.2.1/ShareX-portable.zip</a>&nbsp;</p>
+               <p><strong>Browser Extensions</strong></p>
+               <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/rowrawer/stream-detector/">https://github.com/rowrawer/stream-detector/</a> | Stream Detector (FF Only)</p>
+               <p><a target="_blank" rel="noopener noreferrer" href="https://www.downloadhelper.net/">https://www.downloadhelper.net/</a> |   DLH r (FF or Chrome)</p>
+               <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/HuiiBuh/InstagramDownloader">https://github.com/HuiiBuh/InstagramDownloader</a> | Instagram Downloader (Chrome)</p>
+               <p><a target="_blank" rel="noopener noreferrer" href="https://chrome.google.com/webstore/detail/twitter-media-downloader/cblpjenafgeohmnjknfhpdbdljfkndig">https://chrome.google.com/webstore/detail/twitter-media-downloader/cblpjenafgeohmnjknfhpdbdljfkndig</a> | Twitter Media Downloader (Chrome)</p>
+               <p><strong>3rd Party Application</strong></p>
+               <!-- <p><a target="_blank" rel="noopener noreferrer" href="https://videooctopus.com/">https://videooctopus.com/</a> | Video   Download Application</p> -->
+               <p>&nbsp;</p>
+               <p><strong>Video Capture Scripts</strong></p>
+               <p><strong>Windows Steps</strong></p>
+               <p>Install Youtube-dl   and FFMpeg using <a target="_blank" rel="noopener noreferrer" href="https://chocolatey.org/packages/chocolatey">Chocolatey </a></p>
+               <p>Chocolatey&nbsp;This is a package manager for   Windows that makes it quite easy to install some of our favorite scripts from   the command line. <a target="_blank" rel="noopener noreferrer" href="https://chocolatey.org/packages/chocolatey">https://chocolatey.org/packages/chocolatey</a>&nbsp;</p>
+               <p>Start by opening a   command prompt as administrator: type cmd into the locator bar and right-click   on Command Prompt, select Run as administrator</p>
+               <p>Paste in the   following command and hit Enter:</p>
+               <p>@&quot;%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe&quot;   -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command &quot;iex   ((New-Object   System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))&quot;   &amp;&amp; SET &quot;PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin&quot;</p>
+               <p>Note: You will want to restart your terminal   (again as admin) prior to installing any of the following additional programs.   You can also install from PowerShell directly but the command is slightly   different. </p>
+               <p>Python&nbsp;is a prerequisite for some of the   other scripts</p>
+               <p>F:\&gt;choco   install python</p>
+               <p>FFMpeg&nbsp;Install ffmpeg with Chocolaty to   make it better</p>
+               <p>F:\&gt;choco   install ffmpeg</p>
+               <p>Youtube-dl&nbsp;Install ffmpeg with Chocolaty   to make it better</p>
+               <p>F:\&gt;choco   install youtube-dl</p>
+               <p>VLC&nbsp;Install VLC with Chocolaty</p>
+               <p>F:\&gt;choco   install vlc</p>
+               <p>Streamlink&nbsp;Install Streamlink as a backup   livestream downloader</p>
+               <p>F:\&gt;choco   install streamlink</p>
+               <p>ShareX&nbsp;Screen capture and recording   software</p>
+               <p>F:\&gt;choco   install sharex</p>
+               <p>All Video Tools&nbsp;Install Youtube-dl,   ffmpeg, and VLC with one command</p>
+               <p>F:\&gt;choco   install python youtube-dl ffmpeg vlc streamlink sharex</p>
+               <p>Consider adding a   cmd shortcut setup to run as administrator: <a target="_blank" rel="noopener noreferrer" href="https://helpdeskgeek.com/how-to/command-prompt-admin-rights-windows/">https://helpdeskgeek.com/how-to/command-prompt-admin-rights-windows/</a>&nbsp;</p>
+               <p>&nbsp;</p>
+               <p><strong>Mac Steps</strong></p>
+               <p>Mac is a Unix based   operating-system, so it handles scripts well and with fewer steps. Similar to   Chocolatey in Windows, we can use Brew to setup all of our tools.&nbsp;</p>
+               <p>Installing Brew:</p>
+               <p>Open Terminal -   Control + Option + Shift + T</p>
+               <p>ruby -e   &quot;$(curl -fsSL <a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/Homebrew/install/master/install">https://raw.githubusercontent.com/Homebrew/install/master/install</a>)&quot;</p>
+               <p>Close and reopen   your terminal and then use this command to install your tools:</p>
+               <p>brew install python   youtube-dl ffmpeg vlc streamlink</p>
+               <p>Screen capture: QuickTime is the best native   screen recording for Mac.&nbsp;</p>
+               <p>Hotkey:   Shift-Command (⌘)&nbsp;–&nbsp;5</p>
+               <p>&nbsp;</p>
+               <p><strong>Livestreams</strong></p>
+               <p>There are some   challenges unique to capturing livestreams. Most platforms break the streams   up into several files and if you do not grab the correct master file and in   some cases a header, you may only get a tiny unusable file versus a flowing   stream of video files.</p>
+               <p><strong>Filetypes:</strong>&nbsp;DASH and HLS are the most   common streaming protocols. You will typically be looking for a .m3u8, .mpd,   or possibly a .ts</p>
+               <p><strong>URLs:</strong>&nbsp;Isolating the correct .m3u8, .mpd,   or .ts URL can be challenging. It can be done via the developer panel, but the   easiest way is using the HLS Stream Detector extension on Firefox as listed in   earlier sections.</p>
+               <p>Stopping the Capture: Once a live stream is   being successfully captured you will see the terminal constantly load more   text. To stop the capture, click in the terminal window and hit ctrl-c which   will end the capture and your file will be waiting for you in the capture   folder.</p>
+               <p><strong>VLC:</strong> If all else fails attempt to feed the URL   to VLC via the Open Network Stream option under the Media tab. If it works you   can use the recording feature to capture the stream in VLC as an mp4.</p>
+               <p><strong>Facebooks and Instagram:&nbsp;</strong>Youtube-DL   actually handles most livestreams well, but Facebook and Instagram streams in   particular are captured most successfully using Streamlink. As mentioned   above, use the Streamdetector extension to generate a Streamlink command for   the file URL. See the video for reference. <a target="_blank" rel="noopener noreferrer" href="https://videooctopus.com/">https://videooctopus.com/</a> has worked on some tough FB videos.</p>
+               <p>&nbsp;</p>
+             </ul>
+           </div>
+         </div>
+       </div>
+<p>&nbsp;</p>
+    </div>
+    <!-- /.content-wrapper -->
+
+</div>
+  <!-- /#wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+
+
+  <!-- Bootstrap core JavaScript-->
+<script src="js/jquery.min.js"></script>
+  <!-- <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+<script src="js/bootstrap.bundle.min.js"></script>
+
+  
+
+  
+</body>
+
+</html>

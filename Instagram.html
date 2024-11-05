@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Sh1katagana1 OSINT Dashboard</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Page level plugin CSS-->
+  <!-- <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet"> -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <style type="text/css">
+  @import url("css/sb-admin.min.css");
+  </style>
+</head>
+
+<body id="page-top">
+
+<nav class="navbar navbar-expand navbar-dark bg-dark static-top"><a class="navbar-brand mr-1" href="index.html">Sh1katagana1 OSINT Dashboard</a><img src="Files/logo.png" class="logobottom2" alt="Placeholder image">
+
+</nav>
+
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="sidebar navbar-nav">
+      <li class="nav-item"> <a class="nav-link" href="Search.html"><em class="fas fa-search-plus"></em><span>Search</span></a> </li>
+      <li class="nav-item"> <a class="nav-link" href="Email.html"> <em class="far fa-envelope"></em> <span>Email</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Username.html"> <em class="far fa-id-card"></em> <span>Username</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Name.html"> <em class="fas fa-file-signature"></em> <span>Name</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Telephone.html"> <em class="fas fa-phone"></em> <span>Telephone</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Twitter.html"> <em class="fab fa-twitter"></em> <span>Twitter</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Instagram.html"> <em class="fab fa-instagram"></em> <span>Instagram</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Communities.html"> <em class="fab fa-reddit-square"></em> <span>Communities</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Linkedin.html"> <em class="fab fa-linkedin"></em> <span>LinkedIn</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Domain.html"> <em class="fas fa-globe"></em> <span>Domain</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="IP.html"> <em class="fas fa-terminal"></em> <span>IP</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Videos.html"> <em class="fab fa-youtube"></em> <span>Videos</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Images.html"> <em class="fas fa-image"></em> <span>Images</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Documents.html"> <em class="fas fa-file-alt"></em> <span>Documents</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Pastes.html"> <em class="fas fa-receipt"></em> <span>Pastes</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Business.html"> <em class="far fa-building"></em> <span>Business & Government</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Location.html"> <em class="fas fa-map-marked-alt"></em> <span>Maps & Location</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Currencies.html"> <em class="fab fa-btc"></em> <span>Currencies</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Breaches.html"> <em class="fas fa-user-secret"></em> <span>Breaches</span></a></li>
+    </ul>
+
+
+<!-- Breadcrumbs-->
+<ol class="breadcrumb">
+  <h4 class="text-center">Instagram Search Tools</h4><br>
+
+    <div id="content-wrapper">
+
+      <div class="container-fluid">
+
+        <script type="text/javascript">
+          function doPopAll(PopAll){var pop = document.getElementById("PopAll");
+          for (j = 1; j <= 100; j++){if (j < 10){j = "0" + j.toString();}
+          else {j = j.toString();}
+          console.log(j)
+          item = document.getElementById("Search" + j);
+          if (item != null){item.value = pop.value;}}}
+          </script>
+          <form onsubmit="doPopAll(this.PopAll.value); return false;">
+          <input type="text" id="PopAll" name="PopAll" size="30" placeholder="Username"/>
+          <input type="submit" style="width:140px" value="Populate All" /><br></form><br>
+          
+          <script type="text/javascript">
+            function doSearch01(Search01)
+            {window.open('http://instagram.com/' + Search01, 'Search01window');}
+            </script>
+            <form onsubmit="doSearch01(this.Search01.value); return false;">
+            <input type="text" id="Search01" name="Search01" size="30" placeholder="Username" />
+            <input type="submit" style="width:140px" value="IG Profile" /><br></form>
+            <script type="text/javascript">
+            function doSearch02(Search02)
+            {window.open('http://instagram.com/' + Search02 + '/channel/', 'Search02window');}
+            </script>
+            <form onsubmit="doSearch02(this.Search02.value); return false;">
+            <input type="text" id="Search02" name="Search02" size="30" placeholder="Username" value="" />
+            <input type="submit" style="width:140px" value="IG Channel" /><br></form>
+            <script type="text/javascript">
+            function doSearch03(Search03)
+            {window.open('https://instagram.com/' + Search03 + '/tagged/', 'Search03window');}
+            </script>
+            <form onsubmit="doSearch03(this.Search03.value); return false;">
+            <input type="text" id="Search03" name="Search03" size="30" placeholder="Username" value="" />
+            <input type="submit" style="width:140px" value="IG Tagged" /><br></form>
+            <script type="text/javascript">
+            function doSearch04(Search04)
+            {window.open('https://www.google.com/search?q=site%3Ainstagram.com+"' + Search04 + '%22', 'Search04window');}
+            </script>
+            <form onsubmit="doSearch04(this.Search04.value); return false;">
+            <input type="text" id="Search04" name="Search04" size="30" placeholder="Username" value="" />
+            <input type="submit" style="width:140px" value="Outgoing Search" /><br></form>
+            <script type="text/javascript">
+            function doSearch05(Search05)
+            {window.open('https://www.google.com/search?q=site%3Ainstagram.com+"@' + Search05 + '"', 'Search05window');}
+            </script>
+            <form onsubmit="doSearch05(this.Search05.value); return false;">
+            <input type="text" id="Search05" name="Search05" size="30" placeholder="Username" value="" />
+            <input type="submit" style="width:140px" value="Incoming Search" /><br></form>
+            <script type="text/javascript">
+            function doSearch06(Search06)
+            {window.open('https://www.bing.com/search?q=site%3Ainstagram.com+"' + Search06 + '"', 'Search06window');}
+            </script>
+            <form onsubmit="doSearch06(this.Search06.value); return false;">
+            <input type="text" id="Search06" name="Search06" size="30" placeholder="Username" value="" />
+            <input type="submit" style="width:140px" value="Bing Search" /><br></form>
+            <script type="text/javascript">
+            function doSearch07(Search07)
+            {window.open('https://yandex.com/search/?text=site%3Ainstagram.com+"' + Search07 + '"', 'Search07window');}
+            </script>
+            <form onsubmit="doSearch07(this.Search07.value); return false;">
+            <input type="text" id="Search07" name="Search07" size="30" placeholder="Username" value="" />
+            <input type="submit" style="width:140px" value="Yandex Search" /><br></form>
+            <script type="text/javascript">
+            function doSearch08(Search08)
+            {window.open('https://www.google.com/search?q=site%3Atwitter.com+“' + Search08 + '”+“instagram.com%2Fp”', 'Search08window');}
+            </script>
+            <form onsubmit="doSearch08(this.Search08.value); return false;">
+            <input type="text" id="Search08" name="Search08" size="30" placeholder="Username" value="" />
+            <input type="submit" style="width:140px" value="Twitter Posts" /><br></form>
+            <script type="text/javascript">
+            function doSearch09(Search09)
+            {window.open('https://dumpor.com/v/' + Search09, 'Search09window');}
+            </script>
+            <form onsubmit="doSearch09(this.Search09.value); return false;">
+            <input type="text" id="Search09" name="Search09" size="30" placeholder="Username" value="" />
+            <input type="submit" style="width:140px" value="Dumpor Profile" /><br></form>
+            <script type="text/javascript">
+            function doSearch10(Search10)
+            {window.open('https://www.instagram.com/graphql/query/?query_hash=c76146de99bb02f6415203be841dd25a&variables={%22id%22:%22' + Search10 + '%22,%22include_reel%22:true,%22fetch_mutual%22:true,%22first%22:50}', 'Search10window');}
+            </script>
+            <form onsubmit="doSearch10(this.Search10.value); return false;">
+            <input type="text" id="Search10" name="Search10" size="30" placeholder="IG User ID" value="" />
+            <input type="submit" style="width:140px" value="Followers" /><br></form>
+            <script type="text/javascript">
+            function doSearch11(Search11)
+            {window.open('https://www.instagram.com/graphql/query/?query_hash=d04b0a864b4b54837c0d870b0e77e076&variables={%22id%22:%22' + Search11 + '%22,%22include_reel%22:true,%22fetch_mutual%22:false,%22first%22:50}', 'Search11window');}
+            </script>
+            <form onsubmit="doSearch11(this.Search11.value); return false;">
+            <input type="text" id="Search11" name="Search11" size="30" placeholder="IG User ID" value="" />
+            <input type="submit" style="width:140px" value="Following" /><br></form>
+            <br>
+            <script type="text/javascript">
+            function doSearch12(Search12,Search12b)
+            {window.open('https://www.google.com/search?&q=site%3Ainstagram.com+“' + Search12 + '”+“' + Search12b + '”', 'Search12window');}
+            </script>
+            <form onsubmit="doSearch12(this.Search12.value,this.Search12b.value); return false;">
+            <input type="text" id="Search12" name="Search12" size="15" placeholder="Username" value="" />
+            <input type="text" name="Search12b" size="15" placeholder="Search Terms" value="" />
+            <input type="submit" style="width:140px" value="User + Term" /><br></form>
+            <script type="text/javascript">
+            function doSearch13(Search13,Search13b)
+            {window.open('https://www.google.com/search?&q=site%3Ainstagram.com+“' + Search13 + '”+“' + Search13b + '”', 'Search13window');}
+            </script>
+            <form onsubmit="doSearch13(this.Search13.value,this.Search13b.value); return false;">
+            <input type="text" id="Search13" name="Search13" size="15" placeholder="Username" value="" />
+            <input type="text" name="Search13b" size="15" placeholder="Username" value="" />
+            <input type="submit" style="width:140px" value="Associations" /><br></form>
+            <br>
+            <script type="text/javascript">
+            function doSearch14(Search14)
+            {window.open('https://www.instagram.com/explore/tags/' + Search14, 'Search14window');}
+            </script>
+            <form onsubmit="doSearch14(this.Search14.value); return false;">
+            <input type="text" name="Search14" size="30" placeholder="Search Terms" value="" />
+            <input type="submit" style="width:140px" value="IG Hashtags" /><br></form>
+            <script type="text/javascript">
+            function doSearch15(Search15)
+            {window.open('https://www.google.com/search?&q=site%3Ainstagram.com+' + Search15, 'Search15window');}
+            </script>
+            <form onsubmit="doSearch15(this.Search15.value); return false;">
+            <input type="text" name="Search15" size="30" placeholder="Search Terms" value="" />
+            <input type="submit" style="width:140px" value="IG Terms" /><br></form>
+            <script type="text/javascript">
+            function doSearch16(Search16)
+            {window.open('https://dumpor.com/t/' + Search16, 'Search16window');}
+            </script>
+            <form onsubmit="doSearch16(this.Search16.value); return false;">
+            <input type="text" name="Search16" size="30" placeholder="Hashtag" value="" />
+            <input type="submit" style="width:140px" value="Dumpor Tag" /><br></form>
+
+         <br>
+         <br>
+
+   <!-- Page Content --></div>
+       <p><!-- /.container-fluid -->
+         <b>Additional Resources </b></p>
+       <div>
+         <div>
+           <div>
+             <ul>
+               
+               <p><strong>Search &amp; Operators</strong></p>
+               <p>Example of using   Google to search Instagram:</p>
+               <p>Site:instagram.com   &ldquo;target name&rdquo;</p>
+               <p>Site:instagram.com   &ldquo;@username&rdquo;</p>
+               <p>&nbsp;</p>
+               <p><strong>Example of search   for IG photos on Twitter:</strong></p>
+               <p>site:twitter.com   &ldquo;username&rdquo; &ldquo;Instagram.com/p&rdquo;</p>
+               <p>&nbsp;</p>
+               <p><strong>Hashtags (URL   Manipulation):</strong></p>
+               <p><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/explore/tags/keyword/">https://www.instagram.com/explore/tags/keyword/</a></p>
+               <p>(Only works if they   put # on their hashtags)</p>
+               <p>&nbsp;</p>
+               <p><strong>Tagged:</strong></p>
+               <p><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/username/tagged/">https://www.instagram.com/username/tagged/</a></p>
+               <p>&nbsp;</p>
+               <p><strong>Channels:</strong></p>
+               <p><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/username/channel/">https://www.instagram.com/username/channel/</a></p>
+               <p>Videos: right   click, inspect, network tab, filter for mp4, refresh, right-click, save</p>
+               <p>&nbsp;</p>
+               <p><strong>Third Party Search &amp;   Analysis Sites</strong></p>
+               <p>This section lists   sites that can be used to search or analyze the type of data or platform.</p>
+               <!-- <p><a target="_blank" rel="noopener noreferrer" href="https://searchmy.bio">https://searchmy.bio</a>| Search my bio (IG and   Twitter)</p> -->
+               <!-- <p><a target="_blank" rel="noopener noreferrer" href="https://stalkfest.com">https://stalkfest.com</a> | StalkFest</p> -->
+
+               
+               <p><a target="_blank" rel="noopener noreferrer" href="https://storysaver.net">https://storysaver.net</a> | Story Saver</p>
+               <p>&nbsp;</p>
+               <p><strong>Profile Images</strong></p>
+               <p>Instagram does not   want us to be able to isolate the profile image, here are steps to solve that.</p>
+               <p>Method 1:</p>
+               <ol type="1">
+                 <li value="1">Right click on        the page and choose &ldquo;view page source&rdquo;</li>
+                 <li>Ctrl-F and search for        og:image</li>
+                 <li>The long link in the code is        a very small resolution profile image</li>
+                 <li>Copy the number before .jpg</li>
+                 <li>Ctrl-F again and search for        that number (something like 183746353)</li>
+                 <li>The third instance of that        number is a link to a higher resolution profile image</li>
+               </ol>
+               <p>In   URL replace every \u0026 with &amp;</p>
+               <ol type="1">
+                 <li value="7">Search page        source of images posts for 1080</li>
+               </ol>
+               <p>In   URL replace every \u0026 with &amp;</p>
+               <p>&nbsp;</p>
+               <p>Method 2:</p>
+               <ol type="1">
+                 <li value="1">In chrome        right-click to the side of the profile photo (not on it) and select        inspect to open the developer panel</li>
+                 <li>In the dev panel select the        sources tab to open a file tree for the page</li>
+                 <li>Expand any entries starting        with &ldquo;scontent&rdquo;</li>
+                 <li>Image folders are nested        here and grouped by resolution and typically ordered with higher        resolution files at the top of the list</li>
+                 <li>Clicking on the file will        open a preview in the Sources panel</li>
+                 <li>Right clicking the file name        will allow you to open it in a new tab or in the network tab of the        developer panel</li>
+               </ol>
+               <p>&nbsp;</p>
+               <p><strong>Stories</strong></p>
+               <p>Instafollowers.co/download-instagram-stories</p>
+               <p>Ingramer.com/tools/stories-viewer</p>
+               <p>Downloader for   Instagram on <a target="_blank" rel="noopener noreferrer" href="https://chrome.google.com/webstore">https://chrome.google.com/webstore</a> (<strong>Can get you suspended)</strong></p>
+               <p>&nbsp;</p>
+               <p><strong>Third party profile image   sites/tools</strong></p>
+               <p>Downloadgram.com</p>
+               <p>Dinsta.com/photos</p>
+               <p>Instadp.org</p>
+               <p>Gramsave.com</p>
+               <p>Gramvio.com</p>
+               <p>Instadownloader.co</p>
+               <p>Instafollowers.co</p>
+               <p>Instaoffline.net</p>
+               <p>&nbsp;</p>
+               <p><strong>User numbers</strong> on IG   are not particularly useful but you may want them for your report or legal   requests. We can use the page source to find that information as well.</p>
+               <ul type="disc">
+                 <li>Right click on the page and        choose &ldquo;view page source&rdquo;</li>
+                 <li>Ctrl-F and search for        &ldquo;owner&rdquo;:{&ldquo;id&rdquo;</li>
+                 <li>The number at that sting of        character is the user number, similar to 2673300545</li>
+               </ul>
+               <p>&nbsp;</p>
+               <p><strong>Time of post</strong></p>
+               <p>Search post source   for &quot;taken_at_timestamp&quot;</p>
+               <p>Date in Unix time   so use epochconverter.com</p>
+               <p>&nbsp;</p>
+               <p><strong>Followers</strong></p>
+               <p>You must be logged   in to view the followers of a specific account. Manual capture of followers   and following:</p>
+               <ul type="disc">
+                 <li>While logged in click on the        following or followers link</li>
+                 <li>Scroll to the bottom and        then hit Ctrl-A which will select all entries</li>
+                 <li>Right click and select &ldquo;Copy        selected links&rdquo; (this works best in Firefox)</li>
+                 <li>Paste into your OneNote or a        spread sheet&nbsp;</li>
+               </ul>
+               <p>Third party   follower tool of choice:</p>
+               <p><a target="_blank" rel="noopener noreferrer" href="https://followerwonk.com/">https://followerwonk.com</a> | Follower   analysis</p>
+               <p>&nbsp;</p>
+               <p><strong>Complete Post Analysis</strong></p>
+               <ol type="1">
+                 <li value="1">First screen        capture the page using Fireshot or your screen capture of choice</li>
+                 <li>Next save the image:</li>
+                 <li>Right click on the photo and        choose &ldquo;inspect&rdquo; which will open the developer panel</li>
+                 <li>Method 1: Select the Network        tab</li>
+                 <ul type="circle">
+                   <li>click on the Img filter and         then you may need to refresh the page (F5 key)</li>
+                   <li>a list of images will         appear</li>
+                   <li>right-click on each and         open it in a new tab to view</li>
+                   <li>right-click on the image         and choose &ldquo;save as&rdquo;</li>
+                 </ul>
+                 <li>Method 2: Select the Sources        tab</li>
+                 <ul type="circle">
+                   <li>Expand the entry that         starts with &ldquo;scontent&rdquo;, this will reveal nested folders containing the         images from the page</li>
+                   <li>Once you find the one you         want, right click on it and either open it in a new tab or hit save</li>
+                 </ul>
+                 <li>Paste the URL into a browser        and download the full version of the suspect image.</li>
+                 <li>Scroll through the comments,        and expand any if necessary, by clicking &quot;+&quot;.</li>
+                 <li>Click the summary of likes        below the heart icon.</li>
+                 <li>Scroll through them until        all are loaded, select all with ctrl-a (command-a on Mac)&nbsp;</li>
+                 <li>Paste these into a        spreadsheet or your OneNote using ctrl-v</li>
+                 <li>Repeat with any other posts        that you need in full</li>
+                 <li>Remember that you can use a        script such as Instaloader to download all the photos, but it will only        get the photos, not the comments…thus instructions for manual capture</li>
+               </ol>
+               <p>&nbsp;</p>
+               <p><strong>Download IG Videos   (Stories)</strong></p>
+             </ul>
+             <ol>
+               <li>Open the video</li>
+               <li>Right click next to   the video (not on it) and select inspect</li>
+               <li>Click on the   network tab</li>
+               <li>In the filter field   type in MP4, make sure the &ldquo;All&rdquo; filter is also selected</li>
+               <li>Refresh the video   by playing it again or hitting F5</li>
+               <li>In the dev panel   the links to the video will show up, right-click and open in a new tab</li>
+               <li>The video will load   in a new tab, right-click and select save video as</li>
+             </ol>
+             <ul>
+               <p>&nbsp;</p>
+               <p><strong>Scripts &amp; Advanced   Tools</strong></p>
+               <p>Scripts and/or   programs for more advanced search and analysis.</p>
+               <p>G:\Tools\yourcustomofflinetools\instagram.html   | This address will be slightly different for you</p>
+               <p><a target="_blank" rel="noopener noreferrer" href="https://instaloader.github.io/index.html">https://instaloader.github.io/index.html</a> | IG Photo Downloader</p>
+               <ol type="1">
+                 <li value="1">To install and        run on Linux (or via WSL):</li>
+                 <ol type="1">
+                   <li value="1">sudo pip3         install instaloader</li>
+                   <li>instaloader profile         username</li>
+                 </ol>
+               </ol>
+               <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/althonos/InstaLooter">https://github.com/althonos/InstaLooter</a> | Instalooter was the previous favorite but often fails lately&nbsp;</p>
+             </ul>
+           </div>
+         </div>
+       </div>
+<p>&nbsp;</p>
+    </div>
+    <!-- /.content-wrapper -->
+
+</div>
+  <!-- /#wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+
+
+  <!-- Bootstrap core JavaScript-->
+<script src="js/jquery.min.js"></script>
+  <!-- <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+<script src="js/bootstrap.bundle.min.js"></script>
+
+  
+
+  
+</body>
+
+</html>

@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Sh1katagana1 OSINT Dashboard</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Page level plugin CSS-->
+  <!-- <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet"> -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <style type="text/css">
+    @import url("css/sb-admin.min.css");
+  </style>
+</head>
+
+<body id="page-top">
+
+  <nav class="navbar navbar-expand navbar-dark bg-dark static-top"><a class="navbar-brand mr-1"
+      href="index.html">Sh1katagana1 OSINT Dashboard</a><img src="Files/logo.png" class="logobottom2"
+      alt="Placeholder image">
+
+  </nav>
+
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="sidebar navbar-nav">
+      <li class="nav-item"> <a class="nav-link" href="Search.html"><em class="fas fa-search-plus"></em><span>Search</span></a> </li>
+      <li class="nav-item"> <a class="nav-link" href="Email.html"> <em class="far fa-envelope"></em> <span>Email</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Username.html"> <em class="far fa-id-card"></em> <span>Username</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Name.html"> <em class="fas fa-file-signature"></em> <span>Name</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Telephone.html"> <em class="fas fa-phone"></em> <span>Telephone</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Twitter.html"> <em class="fab fa-twitter"></em> <span>Twitter</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Instagram.html"> <em class="fab fa-instagram"></em> <span>Instagram</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Communities.html"> <em class="fab fa-reddit-square"></em> <span>Communities</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Linkedin.html"> <em class="fab fa-linkedin"></em> <span>LinkedIn</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Domain.html"> <em class="fas fa-globe"></em> <span>Domain</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="IP.html"> <em class="fas fa-terminal"></em> <span>IP</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Videos.html"> <em class="fab fa-youtube"></em> <span>Videos</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Images.html"> <em class="fas fa-image"></em> <span>Images</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Documents.html"> <em class="fas fa-file-alt"></em> <span>Documents</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Pastes.html"> <em class="fas fa-receipt"></em> <span>Pastes</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Business.html"> <em class="far fa-building"></em> <span>Business & Government</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Location.html"> <em class="fas fa-map-marked-alt"></em> <span>Maps & Location</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Currencies.html"> <em class="fab fa-btc"></em> <span>Currencies</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="Breaches.html"> <em class="fas fa-user-secret"></em> <span>Breaches</span></a></li>
+    </ul>
+
+
+
+    <!-- Breadcrumbs-->
+    <ol class="breadcrumb">
+
+
+
+
+      <h4 class="text-left">Location Search by Address</h4><br>
+
+      <div id="content-wrapper">
+
+        <div class="container-fluid">
+          <script type="text/javascript">
+            function doPopAll(number, street, city, state, zip) {
+              for (j = 1; j <= 100; j++) {
+                if (j < 10) {
+                  j = "0" + j.toString();
+                }
+                else {
+                  j = j.toString();
+                }
+                //console.log("Search" + j + "a")
+                numberToPop = document.getElementById("Search" + j + "a");
+                streetToPop = document.getElementById("Search" + j + "b");
+                cityToPop = document.getElementById("Search" + j + "c");
+                stateToPop = document.getElementById("Search" + j + "d");
+                zipToPop = document.getElementById("Search" + j + "e");
+                if (numberToPop != null && streetToPop != null && cityToPop != null && stateToPop != null && zipToPop != null) {
+                  numberToPop.value = number;
+                  streetToPop.value = street;
+                  cityToPop.value = city;
+                  stateToPop.value = state;
+                  zipToPop.value = zip;
+                }
+              }
+            }
+          </script>
+          <form
+            onsubmit="doPopAll(this.Search00a.value, this.Search00b.value, this.Search00c.value, this.Search00d.value, this.Search00e.value); return false;">
+            <input type="text" name="Search00a" id="Search00a" size="4" placeholder="1212" />
+            <input type="text" name="Search00b" id="Search00b" size="7" placeholder="main st" />
+            <input type="text" name="Search00c" id="Search00c" size="8" placeholder="new york" />
+            <input type="text" name="Search00d" id="Search00d" size="3" placeholder="ny" />
+            <input type="text" name="Search00e" id="Search00e" size="5" placeholder="10102" />
+            <input type="submit" style="width:120px" value="Populate All" />
+          </form>
+          <br />
+
+          <script type="text/javascript">
+            function doSearch01(Search01a, Search01b, Search01c, Search01d, Search01e) { window.open('https://services.gisgraphy.com/geocoding/geocode?address=' + Search01a + '+' + Search01b + '+' + Search01c + '+' + Search01d + '+' + Search01e + '&format=json', 'Search01window'); }
+          </script>
+          <form
+            onsubmit="doSearch01(this.Search01a.value, this.Search01b.value, this.Search01c.value, this.Search01d.value, this.Search01e.value); return false;">
+            <input type="text" name="Search01a" id="Search01a" size="4" placeholder="1212" />
+            <input type="text" name="Search01b" id="Search01b" size="7" placeholder="main st" />
+            <input type="text" name="Search01c" id="Search01c" size="8" placeholder="new york" />
+            <input type="text" name="Search01d" id="Search01d" size="3" placeholder="ny" />
+            <input type="text" name="Search01e" id="Search01e" size="5" placeholder="10102" />
+            <input type="submit" style="width:80px" value="GPS" />
+          </form>
+          <script type="text/javascript">
+            function doSearch02(Search02a, Search02b, Search02c, Search02d, Search02e) { window.open('https://www.zillow.com/homes/' + Search02a + '-' + Search02b + '-' + Search02c + '_rb/', 'Search02window'); }
+          </script>
+          <form
+            onsubmit="doSearch02(this.Search02a.value, this.Search02b.value, this.Search02c.value, this.Search02d.value, this.Search02e.value); return false;">
+            <input type="text" name="Search02a" id="Search02a" size="4" placeholder="1212" />
+            <input type="text" name="Search02b" id="Search02b" size="7" placeholder="main st" />
+            <input type="text" name="Search02c" id="Search02c" size="8" placeholder="new york" />
+            <input type="text" name="Search02d" id="Search02d" size="3" placeholder="ny" />
+            <input type="text" name="Search02e" id="Search02e" size="5" placeholder="10102" />
+            <input type="submit" style="width:80px" value="Zillow" />
+          </form>
+          <script type="text/javascript">
+            function doSearch03(Search03a, Search03b, Search03c, Search03d, Search03e) { window.open('https://rehold.com/' + Search03c + '+' + Search03d + '/' + Search03b + '/' + Search03a, 'Search03window'); }
+          </script>
+          <form
+            onsubmit="doSearch03(this.Search03a.value, this.Search03b.value, this.Search03c.value, this.Search03d.value, this.Search03e.value); return false;">
+            <input type="text" name="Search03a" id="Search03a" size="4" placeholder="1212" />
+            <input type="text" name="Search03b" id="Search03b" size="7" placeholder="main st" />
+            <input type="text" name="Search03c" id="Search03c" size="8" placeholder="new york" />
+            <input type="text" name="Search03d" id="Search03d" size="3" placeholder="ny" />
+            <input type="text" name="Search03e" id="Search03e" size="5" placeholder="10102" />
+            <input type="submit" style="width:80px" value="Rehold" />
+          </form>
+          <script type="text/javascript">
+            function doSearch04(Search04a, Search04b, Search04c, Search04d, Search04e) { window.open('https://www.google.com/search?q=' + Search04a + '+' + Search04b + '+' + Search04c + '+' + Search04d + '+' + Search04e, 'Search04window'); }
+          </script>
+          <form
+            onsubmit="doSearch04(this.Search04a.value, this.Search04b.value, this.Search04c.value, this.Search04d.value, this.Search04e.value); return false;">
+            <input type="text" name="Search04a" id="Search04a" size="4" placeholder="1212" />
+            <input type="text" name="Search04b" id="Search04b" size="7" placeholder="main st" />
+            <input type="text" name="Search04c" id="Search04c" size="8" placeholder="new york" />
+            <input type="text" name="Search04d" id="Search04d" size="3" placeholder="ny" />
+            <input type="text" name="Search04e" id="Search04e" size="5" placeholder="10102" />
+            <input type="submit" style="width:80px" value="Google" />
+          </form>
+          <script type="text/javascript">
+            function doSearch05(Search05a, Search05b, Search05c, Search05d, Search05e) { window.open('https://www.cyberbackgroundchecks.com/address/' + Search05a + '-' + Search05b + '/' + Search05c + '/' + Search05d, 'Search05window'); }
+          </script>
+          <form
+            onsubmit="doSearch05(this.Search05a.value, this.Search05b.value, this.Search05c.value, this.Search05d.value, this.Search05e.value); return false;">
+            <input type="text" name="Search05a" id="Search05a" size="4" placeholder="1212" />
+            <input type="text" name="Search05b" id="Search05b" size="7" placeholder="main st" />
+            <input type="text" name="Search05c" id="Search05c" size="8" placeholder="new york" />
+            <input type="text" name="Search05d" id="Search05d" size="3" placeholder="ny" />
+            <input type="text" name="Search05e" id="Search05e" size="5" placeholder="10102" />
+            <input type="submit" style="width:80px" value="CBC" />
+          </form>
+          <script type="text/javascript">
+            function doSearch06(Search06a, Search06b, Search06c, Search06d, Search06e) { window.open('https://homemetry.com/house/' + Search06a + '+' + Search06b + ',+' + Search06c + '+' + Search06d, 'Search06window'); }
+          </script>
+          <form
+            onsubmit="doSearch06(this.Search06a.value, this.Search06b.value, this.Search06c.value, this.Search06d.value, this.Search06e.value); return false;">
+            <input type="text" name="Search06a" id="Search06a" size="4" placeholder="1212" />
+            <input type="text" name="Search06b" id="Search06b" size="7" placeholder="main st" />
+            <input type="text" name="Search06c" id="Search06c" size="8" placeholder="new york" />
+            <input type="text" name="Search06d" id="Search06d" size="3" placeholder="ny" />
+            <input type="text" name="Search06e" id="Search06e" size="5" placeholder="10102" />
+            <input type="submit" style="width:80px" value="Hometry" />
+          </form>
+          <script type="text/javascript">
+            function doSearch07(Search07a, Search07b, Search07c, Search07d, Search07e) { window.open('https://www.searchpeoplefree.com/address/' + Search07d + '/' + Search07c + '/' + Search07b + '/' + Search07a, 'Search07window'); }
+          </script>
+          <form
+            onsubmit="doSearch07(this.Search07a.value, this.Search07b.value, this.Search07c.value, this.Search07d.value, this.Search07e.value); return false;">
+            <input type="text" name="Search07a" id="Search07a" size="4" placeholder="1212" />
+            <input type="text" name="Search07b" id="Search07b" size="7" placeholder="main st" />
+            <input type="text" name="Search07c" id="Search07c" size="8" placeholder="new york" />
+            <input type="text" name="Search07d" id="Search07d" size="3" placeholder="ny" />
+            <input type="text" name="Search07e" id="Search07e" size="5" placeholder="10102" />
+            <input type="submit" style="width:80px" value="SPF" />
+          </form>
+          <script type="text/javascript">
+            function doSearch08(Search08a, Search08b, Search08c, Search08d, Search08e) { window.open('https://www.spokeo.com/' + Search08d + '/' + Search08c + '/' + Search08a + '-' + Search08b, 'Search08window'); }
+          </script>
+          <form
+            onsubmit="doSearch08(this.Search08a.value, this.Search08b.value, this.Search08c.value, this.Search08d.value, this.Search08e.value); return false;">
+            <input type="text" name="Search08a" id="Search08a" size="4" placeholder="1212" />
+            <input type="text" name="Search08b" id="Search08b" size="7" placeholder="main st" />
+            <input type="text" name="Search08c" id="Search08c" size="8" placeholder="new york" />
+            <input type="text" name="Search08d" id="Search08d" size="3" placeholder="ny" />
+            <input type="text" name="Search08e" id="Search08e" size="5" placeholder="10102" />
+            <input type="submit" style="width:80px" value="Spokeo" />
+          </form>
+          <script type="text/javascript">
+            function doSearch09(Search09a, Search09b, Search09c, Search09d, Search09e) { window.open('https://www.advancedbackgroundchecks.com/address/' + Search09a + '-' + Search09b + '_' + Search09c + '-' + Search09d + '-' + Search09e, 'Search09window'); }
+          </script>
+          <form
+            onsubmit="doSearch09(this.Search09a.value, this.Search09b.value, this.Search09c.value, this.Search09d.value, this.Search09e.value); return false;">
+            <input type="text" name="Search09a" id="Search09a" size="4" placeholder="1212" />
+            <input type="text" name="Search09b" id="Search09b" size="7" placeholder="main st" />
+            <input type="text" name="Search09c" id="Search09c" size="8" placeholder="new york" />
+            <input type="text" name="Search09d" id="Search09d" size="3" placeholder="ny" />
+            <input type="text" name="Search09e" id="Search09e" size="5" placeholder="10102" />
+            <input type="submit" style="width:80px" value="ABC" />
+          </form>
+          <script type="text/javascript">
+            function doSearch10(Search10a, Search10b, Search10c, Search10d, Search10e) { window.open('https://www.truepeoplesearch.com/resultaddress?streetaddress=' + Search10a + '%20' + Search10b + '&citystatezip=' + Search10c + '%20' + Search10d + '%20' + Search10e, 'Search10window'); }
+          </script>
+          <form
+            onsubmit="doSearch10(this.Search10a.value, this.Search10b.value, this.Search10c.value, this.Search10d.value, this.Search10e.value); return false;">
+            <input type="text" name="Search10a" id="Search10a" size="4" placeholder="1212" />
+            <input type="text" name="Search10b" id="Search10b" size="7" placeholder="main st" />
+            <input type="text" name="Search10c" id="Search10c" size="8" placeholder="new york" />
+            <input type="text" name="Search10d" id="Search10d" size="3" placeholder="ny" />
+            <input type="text" name="Search10e" id="Search10e" size="5" placeholder="10102" />
+            <input type="submit" style="width:80px" value="TPS" />
+          </form>
+          <script type="text/javascript">
+            function doSearch11(Search11a, Search11b, Search11c, Search11d, Search11e) { window.open('https://www.fastpeoplesearch.com/address/4024-aberdeen_alton-il-62002' + Search11a + '-' + Search11b + '_' + Search11c + '-' + Search11d + '-' + Search11e, 'Search11window'); }
+          </script>
+          <form
+            onsubmit="doSearch11(this.Search11a.value, this.Search11b.value, this.Search11c.value, this.Search11d.value, this.Search11e.value); return false;">
+            <input type="text" name="Search11a" id="Search11a" size="4" placeholder="1212" />
+            <input type="text" name="Search11b" id="Search11b" size="7" placeholder="main st" />
+            <input type="text" name="Search11c" id="Search11c" size="8" placeholder="new york" />
+            <input type="text" name="Search11d" id="Search11d" size="3" placeholder="ny" />
+            <input type="text" name="Search11e" id="Search11e" size="5" placeholder="10102" />
+            <input type="submit" style="width:80px" value="FPS" />
+          </form>
+          <script type="text/javascript">
+            function doSearch12(Search12a, Search12b, Search12c, Search12d, Search12e) { window.open('https://nuwber.com/address/' + Search12d + '/' + Search12c + '/' + Search12a + '-' + Search12b + '-' + Search12e, 'Search12window'); }
+          </script>
+          <form
+            onsubmit="doSearch12(this.Search12a.value, this.Search12b.value, this.Search12c.value, this.Search12d.value, this.Search12e.value); return false;">
+            <input type="text" name="Search12a" id="Search12a" size="4" placeholder="1212" />
+            <input type="text" name="Search12b" id="Search12b" size="7" placeholder="main st" />
+            <input type="text" name="Search12c" id="Search12c" size="8" placeholder="new york" />
+            <input type="text" name="Search12d" id="Search12d" size="3" placeholder="ny" />
+            <input type="text" name="Search12e" id="Search12e" size="5" placeholder="10102" />
+            <input type="submit" style="width:80px" value="Nuwber" />
+          </form>
+          <script type="text/javascript">
+            function doSearch13(Search13a, Search13b, Search13c, Search13d, Search13e) { window.open('https://www.peoplesearchnow.com/address/' + Search13a + '-' + Search13b + '_' + Search13c + '-' + Search13d, 'Search13window'); }
+          </script>
+          <form
+            onsubmit="doSearch13(this.Search13a.value, this.Search13b.value, this.Search13c.value, this.Search13d.value, this.Search13e.value); return false;">
+            <input type="text" name="Search13a" id="Search13a" size="4" placeholder="1212" />
+            <input type="text" name="Search13b" id="Search13b" size="7" placeholder="main st" />
+            <input type="text" name="Search13c" id="Search13c" size="8" placeholder="new york" />
+            <input type="text" name="Search13d" id="Search13d" size="3" placeholder="ny" />
+            <input type="text" name="Search13e" id="Search13e" size="5" placeholder="10102" />
+            <input type="submit" style="width:80px" value="PSN" />
+          </form>
+          <script type="text/javascript">
+            function doSearch14(Search14a, Search14b, Search14c, Search14d, Search14e) { window.open('https://www.whitepages.com/address/' + Search14a + '-' + Search14b + '/' + Search14c + '-' + Search14d, 'Search14window'); }
+          </script>
+          <form
+            onsubmit="doSearch14(this.Search14a.value, this.Search14b.value, this.Search14c.value, this.Search14d.value, this.Search14e.value); return false;">
+            <input type="text" name="Search14a" id="Search14a" size="4" placeholder="1212" />
+            <input type="text" name="Search14b" id="Search14b" size="7" placeholder="main st" />
+            <input type="text" name="Search14c" id="Search14c" size="8" placeholder="new york" />
+            <input type="text" name="Search14d" id="Search14d" size="3" placeholder="ny" />
+            <input type="text" name="Search14e" id="Search14e" size="5" placeholder="10102" />
+            <input type="submit" style="width:80px" value="WP" />
+          </form>
+          <script type="text/javascript">
+            function doSearch15(Search15a, Search15b, Search15c, Search15d, Search15e) { window.open('https://www.smartbackgroundchecks.com/address-search/' + Search15a + '-' + Search15b + '/' + Search15c + '/' + Search15d, 'Search15window'); }
+          </script>
+          <form
+            onsubmit="doSearch15(this.Search15a.value, this.Search15b.value, this.Search15c.value, this.Search15d.value, this.Search15e.value); return false;">
+            <input type="text" name="Search15a" id="Search15a" size="4" placeholder="1212" />
+            <input type="text" name="Search15b" id="Search15b" size="7" placeholder="main st" />
+            <input type="text" name="Search15c" id="Search15c" size="8" placeholder="new york" />
+            <input type="text" name="Search15d" id="Search15d" size="3" placeholder="ny" />
+            <input type="text" name="Search15e" id="Search15e" size="5" placeholder="10102" />
+            <input type="submit" style="width:80px" value="SBC" />
+          </form>
+          <script type="text/javascript">
+            function doSearch16(Search16a, Search16b, Search16c, Search16d, Search16e) { window.open('https://www.peoplesearchnow.com/address/' + Search16a + '-' + Search16b + '_' + Search16c + '-' + Search16d, 'Search16window'); }
+          </script>
+          <form
+            onsubmit="doSearch16(this.Search16a.value, this.Search16b.value, this.Search16c.value, this.Search16d.value, this.Search16e.value); return false;">
+            <input type="text" name="Search16a" id="Search16a" size="4" placeholder="1212" />
+            <input type="text" name="Search16b" id="Search16b" size="7" placeholder="main st" />
+            <input type="text" name="Search16c" id="Search16c" size="8" placeholder="new york" />
+            <input type="text" name="Search16d" id="Search16d" size="3" placeholder="ny" />
+            <input type="text" name="Search16e" id="Search16e" size="5" placeholder="10102" />
+            <input type="submit" style="width:80px" value="PSN" />
+          </form>
+          <script type="text/javascript">
+            function doSearch17(Search17a, Search17b, Search17c, Search17d, Search17e) { window.open('https://www.usa-people-search.com/address/' + Search17a + '-' + Search17b + '/' + Search17c + '-' + Search17d, 'Search17window'); }
+          </script>
+          <form
+            onsubmit="doSearch17(this.Search17a.value, this.Search17b.value, this.Search17c.value, this.Search17d.value, this.Search17e.value); return false;">
+            <input type="text" name="Search17a" id="Search17a" size="4" placeholder="1212" />
+            <input type="text" name="Search17b" id="Search17b" size="7" placeholder="main st" />
+            <input type="text" name="Search17c" id="Search17c" size="8" placeholder="new york" />
+            <input type="text" name="Search17d" id="Search17d" size="3" placeholder="ny" />
+            <input type="text" name="Search17e" id="Search17e" size="5" placeholder="10102" />
+            <input type="submit" style="width:80px" value="USA PS" />
+          </form>
+          <script type="text/javascript">
+            function doSearch18(Search18a, Search18b, Search18c, Search18d, Search18e) { window.open('https://www.peoplefinders.com/people/search/address?address=' + Search18a + '%20' + Search18b + '&city=' + Search18c + '&state=' + Search18d, 'Search18window'); }
+          </script>
+          <form
+            onsubmit="doSearch18(this.Search18a.value, this.Search18b.value, this.Search18c.value, this.Search18d.value, this.Search18e.value); return false;">
+            <input type="text" name="Search18a" id="Search18a" size="4" placeholder="1212" />
+            <input type="text" name="Search18b" id="Search18b" size="7" placeholder="main st" />
+            <input type="text" name="Search18c" id="Search18c" size="8" placeholder="new york" />
+            <input type="text" name="Search18d" id="Search18d" size="3" placeholder="ny" />
+            <input type="text" name="Search18e" id="Search18e" size="5" placeholder="10102" />
+            <input type="submit" style="width:80px" value="PF" />
+          </form>
+          <script type="text/javascript">
+            function doSearch19(Search19a, Search19b, Search19c, Search19d, Search19e) { window.open('https://www.addresses.com/addr/' + Search19a + '+' + Search19b + '/' + Search19c + '+' + Search19d + '/', 'Search19window'); }
+          </script>
+          <form
+            onsubmit="doSearch19(this.Search19a.value, this.Search19b.value, this.Search19c.value, this.Search19d.value, this.Search19e.value); return false;">
+            <input type="text" name="Search19a" id="Search19a" size="4" placeholder="1212" />
+            <input type="text" name="Search19b" id="Search19b" size="7" placeholder="main st" />
+            <input type="text" name="Search19c" id="Search19c" size="8" placeholder="new york" />
+            <input type="text" name="Search19d" id="Search19d" size="3" placeholder="ny" />
+            <input type="text" name="Search19e" id="Search19e" size="5" placeholder="10102" />
+            <input type="submit" style="width:80px" value="Address" />
+          </form><br>
+          <script type="text/javascript">
+            function doall(Search99a, Search99b, Search99c, Search99d, Search99e) {
+              window.open('https://services.gisgraphy.com/geocoding/geocode?address=' + Search99a + '+' + Search99b + '+' + Search99c + '+' + Search99d + '+' + Search99e + '&format=json', 'Search01window');
+              window.open('https://www.zillow.com/homes/' + Search99a + '-' + Search99b + '-' + Search99c + '_rb/', 'Search02window');
+              window.open('https://rehold.com/' + Search99c + '+' + Search99d + '/' + Search99b + '/' + Search99a, 'Search03window');
+              window.open('https://www.google.com/search?q=' + Search99a + '+' + Search99b + '+' + Search99c + '+' + Search99d + '+' + Search99e, 'Search04window');
+              window.open('https://www.cyberbackgroundchecks.com/address/' + Search99a + '-' + Search99b + '/' + Search99c + '/' + Search99d, 'Search05window');
+              window.open('https://homemetry.com/house/' + Search99a + '+' + Search99b + ',+' + Search99c + '+' + Search99d, 'Search06window');
+              window.open('https://www.searchpeoplefree.com/address/' + Search99d + '/' + Search99c + '/' + Search99b + '/' + Search99a, 'Search07window');
+              window.open('https://www.spokeo.com/' + Search99d + '/' + Search99c + '/' + Search99a + '-' + Search99b, 'Search08window');
+              window.open('https://www.advancedbackgroundchecks.com/address/' + Search99a + '-' + Search99b + '_' + Search99c + '-' + Search99d + '-' + Search09e, 'Search09window');
+              window.open('https://www.truepeoplesearch.com/resultaddress?streetaddress=' + Search99a + '%20' + Search99b + '&citystatezip=' + Search99c + '%20' + Search99d + '%20' + Search99e, 'Search10window');
+              window.open('https://www.fastpeoplesearch.com/address/4024-aberdeen_alton-il-62002' + Search99a + '-' + Search99b + '_' + Search99c + '-' + Search99d + '-' + Search11e, 'Search11window');
+              window.open('https://nuwber.com/address/' + Search99d + '/' + Search99c + '/' + Search99a + '-' + Search99b + '-' + Search99e, 'Search12window');
+              window.open('https://www.peoplesearchnow.com/address/' + Search99a + '-' + Search99b + '_' + Search99c + '-' + Search99d, 'Search13window');
+              window.open('https://www.whitepages.com/address/' + Search99a + '-' + Search99b + '/' + Search99c + '-' + Search99d, 'Search14window');
+              window.open('https://www.smartbackgroundchecks.com/address-search/' + Search99a + '-' + Search99b + '/' + Search99c + '/' + Search99d, 'Search15window');
+              window.open('https://www.peoplesearchnow.com/address/' + Search99a + '-' + Search99b + '_' + Search99c + '-' + Search99d, 'Search16window');
+              window.open('https://www.usa-people-search.com/address/' + Search99a + '-' + Search99b + '/' + Search99c + '-' + Search99d, 'Search17window');
+              window.open('https://www.peoplefinders.com/people/search/address?address=' + Search99a + '%20' + Search99b + '&city=' + Search99c + '&state=' + Search99d, 'Search18window');
+              window.open('https://www.addresses.com/addr/' + Search99a + '+' + Search99b + '/' + Search99c + '+' + Search99d + '/', 'Search19window');
+            }
+          </script>
+          <form
+            onsubmit="doall(this.Search99a.value,this.Search99b.value,this.Search99c.value,this.Search99d.value,this.Search99e.value); return false;">
+            <input type="text" name="Search99a" id="Search99a" size="4" placeholder="1212" />
+            <input type="text" name="Search99b" id="Search99b" size="7" placeholder="main st" />
+            <input type="text" name="Search99c" id="Search99c" size="8" placeholder="new york" />
+            <input type="text" name="99d" id="Search99d" size="3" placeholder="ny" />
+            <input type="text" name="Search99e" id="Search99e" size="5" placeholder="10102" />
+            <input type="submit" style="width:80px" value="All" /><br>
+          </form><br>
+
+
+
+
+
+          <h4 class="card-title">Mapping Tool</h4>
+          <hr />
+          <p class="card-text">
+            <script type="text/javascript">
+              function doSearch00(number, street, city, state, zip) { window.open('https://services.gisgraphy.com/geocoding/geocode?address=' + number + '+' + street + '+' + city + '+' + state + '+' + zip + '&format=json', 'Search01window'); }
+            </script>
+          <form
+            onsubmit="doSearch00(this.number.value, this.street.value, this.city.value, this.state.value, this.zip.value); return false;">
+            <input type="text" name="number" size="4" placeholder="#" />
+            <input type="text" name="street" size="7" placeholder="Street" />
+            <input type="text" name="city" size="8" placeholder="City" />
+            <input type="text" name="state" size="3" placeholder="State" />
+            <input type="text" name="zip" size="5" placeholder="Zip" />
+            <input type="submit" style="width:80px" value="Convert" />
+          </form><br>
+
+          <script type="text/javascript">
+            function doPopAll2(FirstName, LastName) {
+              for (j = 1; j <= 100; j++) {
+                if (j < 10) {
+                  j = "0" + j.toString();
+                }
+                else {
+                  j = j.toString();
+                }
+                console.log("Find" + j + "a2")
+                firstNameToPop = document.getElementById("Find" + j + "a");
+                lastNameToPop = document.getElementById("Find" + j + "b");
+                if (firstNameToPop != null && lastNameToPop != null) {
+                  firstNameToPop.value = FirstName;
+                  lastNameToPop.value = LastName;
+                }
+              }
+            }
+
+          </script>
+          <form onsubmit="doPopAll2(this.Find00a.value, this.Find00b.value); return false;">
+            <input type="text" name="Find00a" id="Find00a" size="12" placeholder="Latitude" />
+            <input type="text" name="Find00b" id="Find00b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Populate All" /><br>
+          </form>
+          <br />
+
+          <script type="text/javascript">
+            function doSearch01(Search01a, Search01b)
+            {window.open('https://www.google.com/maps/@?api=1&map_action=map&center=' + Search01a + ',' + Search01b + '&zoom=18&basemap=roadmap', 'Search01window');}
+            </script>
+            <form onsubmit="doSearch01(this.Search01a.value, this.Search01b.value); return false;">
+            <input type="text" name="Search01a" id="Search01a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search01b" id="Search01b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Google Map" /></form>
+            <script type="text/javascript">
+            function doSearch02(Search02a, Search02b)
+            {window.open('https://www.google.com/maps/@?api=1&map_action=map&center=' + Search02a + ',' + Search02b + '&zoom=18&basemap=satellite', 'Search02window');}
+            </script>
+            <form onsubmit="doSearch02(this.Search02a.value, this.Search02b.value); return false;">
+            <input type="text" name="Search02a" id="Search02a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search02b" id="Search02b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Google Sat" /></form>
+            <script type="text/javascript">
+            function doSearch03(Search03a, Search03b)
+            {window.open('https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=' + Search03a + ',' + Search03b + '&heading=0&pitch=-90&fov=100', 'Search03window');}
+            </script>
+            <form onsubmit="doSearch03(this.Search03a.value, this.Search03b.value); return false;">
+            <input type="text" name="Search03a" id="Search03a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search03b" id="Search03b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Google Street" /></form>
+            <script type="text/javascript">
+            function doSearch04(Search04a, Search04b)
+            {window.open('https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=' + Search04a + ',' + Search04b + '&heading=0&pitch=0&fov=90', 'Search04window');}
+            </script>
+            <form onsubmit="doSearch04(this.Search04a.value, this.Search04b.value); return false;">
+            <input type="text" name="Search04a" id="Search04a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search04b" id="Search04b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Google Street (N)" /></form>
+            <script type="text/javascript">
+            function doSearch05(Search05a, Search05b)
+            {window.open('https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=' + Search05a + ',' + Search05b + '&heading=90&pitch=0&fov=90', 'Search05window');}
+            </script>
+            <form onsubmit="doSearch05(this.Search05a.value, this.Search05b.value); return false;">
+            <input type="text" name="Search05a" id="Search05a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search05b" id="Search05b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Google Street (E)" /><br></form>
+            <script type="text/javascript">
+            function doSearch06(Search06a, Search06b)
+            {window.open('https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=' + Search06a + ',' + Search06b + '&heading=180&pitch=0&fov=90', 'Search06window');}
+            </script>
+            <form onsubmit="doSearch06(this.Search06a.value, this.Search06b.value); return false;">
+            <input type="text" name="Search06a" id="Search06a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search06b" id="Search06b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Google Street (S)" /><br></form>
+            <script type="text/javascript">
+            function doSearch07(Search07a, Search07b)
+            {window.open('https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=' + Search07a + ',' + Search07b + '&heading=270&pitch=0&fov=90', 'Search07window');}
+            </script>
+            <form onsubmit="doSearch07(this.Search07a.value, this.Search07b.value); return false;">
+            <input type="text" name="Search07a" id="Search07a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search07b" id="Search07b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Google Street (W)" /><br></form>
+            <script type="text/javascript">
+            function doSearch08(Search08a, Search08b)
+            {window.open('https://www.bing.com/maps?&cp=' + Search08a + '~' + Search08b + '&lvl=20', 'Search08window');}
+            </script>
+            <form onsubmit="doSearch08(this.Search08a.value, this.Search08b.value); return false;">
+            <input type="text" name="Search08a" id="Search08a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search08b" id="Search08b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Bing Map" /><br></form>
+            <script type="text/javascript">
+            function doSearch09(Search09a, Search09b)
+            {window.open('https://www.bing.com/maps?cp=' + Search09a + '~' + Search09b + '&lvl=20&sty=a', 'Search09window');}
+            </script>
+            <form onsubmit="doSearch09(this.Search09a.value, this.Search09b.value); return false;">
+            <input type="text" name="Search09a" id="Search09a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search09b" id="Search09b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Bing Sat" /><br></form>
+            <script type="text/javascript">
+            function doSearch10(Search10a, Search10b)
+            {window.open('https://www.bing.com/maps?cp=' + Search10a + '~' + Search10b + '&lvl=20&sty=o&w=100%&dir=0', 'Search10window');}
+            </script>
+            <form onsubmit="doSearch10(this.Search10a.value, this.Search10b.value); return false;">
+            <input type="text" name="Search10a" id="Search10a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search10b" id="Search10b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Bing Sat (N)" /><br></form>
+            <script type="text/javascript">
+            function doSearch11(Search11a, Search11b)
+            {window.open('https://www.bing.com/maps?cp=' + Search11a + '~' + Search11b + '&lvl=20&sty=o&w=100%&dir=90', 'Search11window');}
+            </script>
+            <form onsubmit="doSearch11(this.Search11a.value, this.Search11b.value); return false;">
+            <input type="text" name="Search11a" id="Search11a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search11b" id="Search11b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Bing Sat (E)" /><br></form>
+            <script type="text/javascript">
+            function doSearch12(Search12a, Search12b)
+            {window.open('https://www.bing.com/maps?cp=' + Search12a + '~' + Search12b + '&lvl=20&sty=o&w=100%&dir=180', 'Search12window');}
+            </script>
+            <form onsubmit="doSearch12(this.Search12a.value, this.Search12b.value); return false;">
+            <input type="text" name="Search12a" id="Search12a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search12b" id="Search12b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Bing Sat (S)" /><br></form>
+            <script type="text/javascript">
+            function doSearch13(Search13a, Search13b)
+            {window.open('https://www.bing.com/maps?cp=' + Search13a + '~' + Search13b + '&lvl=20&sty=o&w=100%&dir=270', 'Search13window');}
+            </script>
+            <form onsubmit="doSearch13(this.Search13a.value, this.Search13b.value); return false;">
+            <input type="text" name="Search13a" id="Search13a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search13b" id="Search13b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Bing Sat (W)" /><br></form>
+            <script type="text/javascript">
+            function doSearch14(Search14a, Search14b)
+            {window.open('https://www.bing.com/maps?cp=' + Search14a + '~' + Search14b + '&lvl=20&dir=0&pi=0&style=x', 'Search14window');}
+            </script>
+            <form onsubmit="doSearch14(this.Search14a.value, this.Search14b.value); return false;">
+            <input type="text" name="Search14a" id="Search14a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search14b" id="Search14b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Bing Street (N)" /><br></form>
+            <script type="text/javascript">
+            function doSearch15(Search15a, Search15b)
+            {window.open('https://www.bing.com/maps?cp=' + Search15a + '~' + Search15b + '&lvl=20&dir=90&pi=0&style=x', 'Search15window');}
+            </script>
+            <form onsubmit="doSearch15(this.Search15a.value, this.Search15b.value); return false;">
+            <input type="text" name="Search15a" id="Search15a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search15b" id="Search15b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Bing Street (E)" /><br></form>
+            <script type="text/javascript">
+            function doSearch16(Search16a, Search16b)
+            {window.open('https://www.bing.com/maps?cp=' + Search16a + '~' + Search16b + '&lvl=20&dir=180&pi=0&style=x', 'Search16window');}
+            </script>
+            <form onsubmit="doSearch16(this.Search16a.value, this.Search16b.value); return false;">
+            <input type="text" name="Search16a" id="Search16a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search16b" id="Search16b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Bing Street (S)" /><br></form>
+            <script type="text/javascript">
+            function doSearch17(Search17a, Search17b)
+            {window.open('https://www.bing.com/maps?cp=' + Search17a + '~' + Search17b + '&lvl=20&dir=270&pi=0&style=x', 'Search17window');}
+            </script>
+            <form onsubmit="doSearch17(this.Search17a.value, this.Search17b.value); return false;">
+            <input type="text" name="Search17a" id="Search17a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search17b" id="Search17b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Bing Street (W)" /><br></form>
+            <script type="text/javascript">
+            function doSearch18(Search18a, Search18b)
+            {window.open('https://zoom.earth/#view=' + Search18a + ',' + Search18b + ',20z', 'Search18window');}
+            </script>
+            <form onsubmit="doSearch18(this.Search18a.value, this.Search18b.value); return false;">
+            <input type="text" name="Search18a" id="Search18a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search18b" id="Search18b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Zoom Earth" /><br></form>
+            <script type="text/javascript">
+            function doSearch20(Search20a, Search20b)
+            {window.open('https://wego.here.com/?map=' + Search20a + ',' + Search20b + ',20,satellite', 'Search20window');}
+            </script>
+            <form onsubmit="doSearch20(this.Search20a.value, this.Search20b.value); return false;">
+            <input type="text" name="Search20a" id="Search20a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search20b" id="Search20b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Here Sat" /><br></form>
+            <script type="text/javascript">
+            function doSearch21(Search21a, Search21b)
+            {window.open('https://yandex.com/maps/?l=sat&ll=' + Search21b + '%2C' + Search21a + '&z=18', 'Search21window');}
+            </script>
+            <form onsubmit="doSearch21(this.Search21a.value, this.Search21b.value); return false;">
+            <input type="text" name="Search21a" id="Search21a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search21b" id="Search21b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Yandex Sat" /><br></form>
+            <script type="text/javascript">
+            function doSearch22(Search22a, Search22b)
+            {window.open('https://search.descarteslabs.com/?layer=naip_v2_rgb_2014-2015#lat=' + Search22a + '&lng=' + Search22b + '&skipTut=true&zoom=20', 'Search22window');}
+            </script>
+            <form onsubmit="doSearch22(this.Search22a.value, this.Search22b.value); return false;">
+            <input type="text" name="Search22a" id="Search22a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search22b" id="Search22b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Descartes" /><br></form>
+            <script type="text/javascript">
+            function doSearch23(Search23a, Search23b)
+            {window.open('http://wikimapia.org/#lang=en&lat=' + Search23a + '&lon=' + Search23b + '&z=20', 'Search23window');}
+            </script>
+            <form onsubmit="doSearch23(this.Search23a.value, this.Search23b.value); return false;">
+            <input type="text" name="Search23a" id="Search23a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search23b" id="Search23b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Wikimapia" /><br></form>
+            <script type="text/javascript">
+            function doSearch24(Search24a, Search24b)
+            {window.open('https://map.snapchat.com/@' + Search24a + ',' + Search24b + ',20.00z', 'Search24window');}
+            </script>
+            <form onsubmit="doSearch24(this.Search24a.value, this.Search24b.value); return false;">
+            <input type="text" name="Search24a" id="Search24a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search24b" id="Search24b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Snapchat" /><br></form>
+            <script type="text/javascript">
+            function doSearch25(Search25a, Search25b)
+            {window.open('https://www.mapillary.com/app/?lat=' + Search25a + '&lng=' + Search25b + '&z=18&p=&mapStyle=Mapillary+satellite&menu=false', 'Search25window');}
+            </script>
+            <form onsubmit="doSearch25(this.Search25a.value, this.Search25b.value); return false;">
+            <input type="text" name="Search25a" id="Search25a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search25b" id="Search25b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Mapillary" /><br></form>
+            <script type="text/javascript">
+            function doSearch26(Search26a, Search26b)
+            {window.open('http://kartaview.org/map/@' + Search26a + ',' + Search26b + ',18z', 'Search26window');}
+            </script>
+            <form onsubmit="doSearch26(this.Search26a.value, this.Search26b.value); return false;">
+            <input type="text" name="Search26a" id="Search26a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search26b" id="Search26b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Karta" /><br></form>
+            <script type="text/javascript">
+            function doSearch27(Search27a, Search27b)
+            {window.open('https://eos.com/landviewer/?lat=' + Search27a + '&lng=' + Search27b + '&z=11', 'Search27window');}
+            </script>
+            <form onsubmit="doSearch27(this.Search27a.value, this.Search27b.value); return false;">
+            <input type="text" name="Search27a" id="Search27a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search27b" id="Search27b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Land Viewer" /><br></form>
+            <script type="text/javascript">
+            function doSearch28(Search28a, Search28b)
+            {window.open('https://satellites.pro/USA_map#' + Search28a + ',' + Search28b + ',18', 'Search28window');}
+            </script>
+            <form onsubmit="doSearch28(this.Search28a.value, this.Search28b.value); return false;">
+            <input type="text" name="Search28a" id="Search28a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search28b" id="Search28b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Apple Maps" /><br></form>
+            <script type="text/javascript">
+            function doSearch29(Search29a, Search29b)
+            {window.open('https://www.acrevalue.com/map/?lat=' + Search29a + '&lng=' + Search29b + '&zoom=17', 'Search29window');}
+            </script>
+            <form onsubmit="doSearch29(this.Search29a.value, this.Search29b.value); return false;">
+            <input type="text" name="Search29a" id="Search29a" size="12" placeholder="Latitude" />
+            <input type="text" name="Search29b" id="Search29b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="AcreValue" /><br></form><br>
+            <script type="text/javascript">
+            function domap(lat, long){
+            window.open('https://www.google.com/maps/@?api=1&map_action=map&center=' + lat + ',' + long + '&zoom=18&basemap=roadmap', 'Search05window');
+            window.open('https://www.google.com/maps/@?api=1&map_action=map&center=' + lat + ',' + long + '&zoom=18&basemap=satellite', 'Search06window');
+            window.open('https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=' + lat + ',' + long + '&heading=0&pitch=-90&fov=100', 'Search07window');
+            window.open('https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=' + lat + ',' + long + '&heading=0&pitch=0&fov=90', 'Search08window');
+            window.open('https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=' + lat + ',' + long + '&heading=90&pitch=0&fov=90', 'Search09window');
+            window.open('https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=' + lat + ',' + long + '&heading=180&pitch=0&fov=90', 'Search10window');
+            window.open('https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=' + lat + ',' + long + '&heading=270&pitch=0&fov=90', 'Search11window');
+            window.open('https://www.bing.com/maps?&cp=' + lat + '~' + long + '&lvl=20', 'Search12window');
+            window.open('https://www.bing.com/maps?cp=' + lat + '~' + long + '&lvl=20&sty=a', 'Search13window');
+            window.open('https://www.bing.com/maps?cp=' + lat + '~' + long + '&lvl=20&sty=o&w=100%&dir=0', 'Search14window');
+            window.open('https://www.bing.com/maps?cp=' + lat + '~' + long + '&lvl=20&sty=o&w=100%&dir=90', 'Search15window');
+            window.open('https://www.bing.com/maps?cp=' + lat + '~' + long + '&lvl=20&sty=o&w=100%&dir=180', 'Search16window');
+            window.open('https://www.bing.com/maps?cp=' + lat + '~' + long + '&lvl=20&sty=o&w=100%&dir=270', 'Search17window');
+            window.open('https://www.bing.com/maps?cp=' + lat + '~' + long + '&lvl=20&dir=0&pi=0&style=x', 'Search18window');
+            window.open('https://www.bing.com/maps?cp=' + lat + '~' + long + '&lvl=20&dir=90&pi=0&style=x', 'Search19window');
+            window.open('https://www.bing.com/maps?cp=' + lat + '~' + long + '&lvl=20&dir=180&pi=0&style=x', 'Search20window');
+            window.open('https://www.bing.com/maps?cp=' + lat + '~' + long + '&lvl=20&dir=270&pi=0&style=x', 'Search21window');
+            window.open('https://zoom.earth/#view=' + lat + ',' + long + ',20z', 'Search22window');
+            window.open('https://wego.here.com/?map=' + lat + ',' + long + ',20,satellite', 'Search24window');
+            window.open('https://yandex.com/maps/?l=sat&ll=' + lat + '%2C' + long + '&z=18', 'Search25window');
+            window.open('https://search.descarteslabs.com/?layer=naip_v2_rgb_2014-2015#lat=' + lat + '&lng=' + long + '&skipTut=true&zoom=20', 'Search26window');
+            window.open('http://wikimapia.org/#lang=en&lat=' + lat + '&lon=' + long + '&z=20', 'Search27window');
+            window.open('https://map.snapchat.com/@' + lat + ',' + long + ',20.00z', 'Search28window');
+            window.open('https://www.mapillary.com/app/?lat=' + lat + '&lng=' + long + '&z=18&p=&mapStyle=Mapillary+satellite&menu=false', 'Search29awindow');
+            window.open('http://openstreetcam.org/map/@' + lat + ',' + long + ',18z', 'Search30window');
+            window.open('https://eos.com/landviewer/?lat=' + lat + '&lng=' + long + '&z=11', 'Search31window');
+            window.open('https://satellites.pro/USA_map#' + lat + ',' + long + ',18', 'Search32window');
+            window.open('https://www.acrevalue.com/map/?lat=' + lat + '&lng=' + long + '&zoom=17', 'Search33window');
+            }
+            </script>
+          <form onsubmit="domap(this.lat.value, this.long.value); return false;">
+            <input type="text" name="lat" id="Find99a" size="12" placeholder="Latitude" />
+            <input type="text" name="long" id="Find99b" size="12" placeholder="Longitude" />
+            <input type="submit" style="width:140px" value="Submit All" />
+          </form>
+          </p>
+
+          <br>
+
+
+
+          <p>&nbsp;</p>
+
+          <!-- Page Content -->
+        </div>
+        <p>
+          <!-- /.container-fluid -->
+          <b>Additional Resources </b>
+        </p>
+        <div>
+          <div>
+            <div>
+              
+              <p><strong>Google Mapping and Imagery Resources:&nbsp;</strong></p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://earth.google.com/web/">https://earth.google.com/web/</a></p>
+              <p>Streetview and basic functions are lower right on the UI</p>
+              <p>Menu -&gt; Settings (Change Lat/Long format as necessary)</p>
+              <p>If you enable &ldquo;Photos&rdquo; you may get some geotagged photo results on the map</p>
+              <p>Mapstyle -&gt; Custom (adjust labels)</p>
+              <p>Choose &ldquo;Add Placemark&rdquo; -&gt; Edit Place (This brings up Lat/Long and a capture button)</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://www.google.com/earth/studio/">https://www.google.com/earth/studio/</a> | Sign up with a
+                burner account, good for preparing high value briefings or post incident reviews, visuals for court</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://earthengine.google.com/timelapse/">https://earthengine.google.com/timelapse/</a> |
+                Showing long term changes in rural areas such as development or construction of large facilities</p>
+              <p>Microsoft/Bing Mapping and Imagery Resources: <a target="_blank" rel="noopener noreferrer"
+                  href="https://www.bing.com/maps">https://www.bing.com/maps</a></p>
+              <p>An address search vs manual zooming will bring up additional Bing data such as Zillow photos of the
+                address.&nbsp;</p>
+              <p>Right-click will bring up the Lat-Long for easy copy as well as a &ldquo;birds-eye&rdquo; option if
+                available. The image source will be listed on the lower right.</p>
+              <p>Streetview is indicated with blue lines and will have the capture date top right. It tends to be less
+                current than Google Streetview.</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://spaghettimodels.com/default.htm">https://spaghettimodels.com/default.htm</a> | Weather
+                related satalite imagery some with meterological and storm models included
+
+              <p>&nbsp;</p>
+              <p><strong>Google Earth Pro</strong> </p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://www.google.com/earth/versions/">https://www.google.com/earth/versions/</a> | Great for
+                creating custom maps or ingesting KML or other geolocation data files</p>
+
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://www.gearthhacks.com/?fwp_search=cocaine">https://www.gearthhacks.com</a>&nbsp; –
+                Thousands of crowdsources data sets</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://www.google.com/earth/outreach/learn/">https://www.google.com/earth/outreach/learn/</a> |
+                Google Earth Tutorials</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://www.gearthblog.com/basics">https://www.gearthblog.com/basics</a> | Google Earth
+                Tutorials</p>
+              <p>&nbsp;</p>
+              <p><strong>Other platforms</strong></p>
+              <p><a target="_blank" rel="noopener noreferrer" href="https://zoom.earth/">https://zoom.earth/</a> | Zoom
+                Earth</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://yandex.com/maps/">https://yandex.com/maps/</a> | Good for viewing areas censored by US
+                companies</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://mapchannels.com/DualMaps.aspx">https://mapchannels.com/DualMaps.aspx</a> | Google Maps,
+                Street View &amp; Birds Eye on one page</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://mc.bbbike.org/mc/">https://mc.bbbike.org/mc/</a> | Compare three map sets for one
+                location</p>
+              <p><a target="_blank" rel="noopener noreferrer" href="https://www.arcgis.com/">https://www.arcgis.com/</a>
+                | Esri map data, used by many gov and private sector agencies</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="http://livingatlas.arcgis.com/wayback/">http://livingatlas.arcgis.com/wayback/</a> | Historical
+                captures by date</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://www.openstreetmap.org">https://www.openstreetmap.org</a> – Includes crowd sourced data.
+                House number overlays, trails, business zones, community landmarks, etc. Also provides GeoNames results
+              </p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://openstreetcam.org/map/">https://openstreetcam.org/map/</a> | OpenStreetCam is now
+                https://kartaview.org/</p>
+              <p><a target="_blank" rel="noopener noreferrer" href="http://wikimapia.org">http://wikimapia.org</a> –
+                Options to pull up Google, Bing, and other map sets with the addition of layer data that includes some
+                infrastructure such as government facilities, parks, schools, etc.</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://eos.com/landviewer/">https://eos.com/landviewer/</a> | View map sets available for
+                target area, sign up with a burner account for more options</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://map.openaerialmap.org/">https://map.openaerialmap.org/</a> | UAV imagery project,
+                crowdsourced aerial imagery</p>
+              <p><a target="_blank" rel="noopener noreferrer" href="https://wego.here.com/">https://wego.here.com/</a> |
+                Older images domestically, worth checking for international POIs</p>
+              <p><a target="_blank" rel="noopener noreferrer" href="https://www.mapbox.com/">https://www.mapbox.com/</a>
+                | Fewer options, older map sets for some areas, metrological layers</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://www.scribblemaps.com/">https://www.scribblemaps.com/</a> | Edit and add your own
+                overlays</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://www.freemaptools.com/">https://www.freemaptools.com/</a> | Customize map views with
+                international toolsets</p>
+              <p>&nbsp;</p>
+              <p><strong>Free Downloadable Imagery</strong></p>
+              <p>1.6 million Landsat 8 OLI/TIRS scenes are available to download from <a target="_blank"
+                  rel="noopener noreferrer" href="https://earthexplorer.usgs.gov/">EarthExplorer</a>, <a target="_blank"
+                  rel="noopener noreferrer" href="https://glovis.usgs.gov/">GloVis</a>, and the <a target="_blank"
+                  rel="noopener noreferrer" href="https://landsatlook.usgs.gov/">LandsatLook Viewer</a></p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://sentinel.esa.int/web/sentinel/missions/sentinel-2/data-products">https://sentinel.esa.int/web/sentinel/missions/sentinel-2/data-products</a>
+              </p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://modis.gsfc.nasa.gov/">https://modis.gsfc.nasa.gov/</a>&nbsp;</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://maps.descarteslabs.com/">https://maps.descarteslabs.com/</a> cycle through sentinel,
+                Landsat, and NAIP imagery</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://gisgeography.com/free-satellite-imagery-data-list/">https://gisgeography.com/free-satellite-imagery-data-list/</a>
+                | List of satellite imagery </p>
+              <p>&nbsp;</p>
+              <p><strong>Social Media Geolocation</strong></p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://onemilliontweetmap.com/">https://onemilliontweetmap.com/</a> | Small sample of twitter
+                data by location</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://www.trendsmap.com/">https://www.trendsmap.com/</a> | Twitter topic map</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://www.omnisci.com/demos/tweetmap">https://www.omnisci.com/demos/tweetmap</a> | Small
+                sample of twitter data</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://github.com/r3mlab/tweetsmapper">https://github.com/r3mlab/tweetsmapper</a> | Map tweets
+                via script (if API geo data exists)</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://map.snapchat.com">https://map.snapchat.com</a> – Small sample of Snapchat data by
+                location</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://mattw.io/youtube-geofind/location">https://mattw.io/youtube-geofind/location</a> |
+                YouTube geolocation based search</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://www.doogal.co.uk/strava.php">https://www.doogal.co.uk/strava.php</a> | Strava exercise
+                data maps</p>
+              <p><a target="_blank" rel="noopener noreferrer" href="http://photo-map.ru/">http://photo-map.ru/</a> | VK
+                mapping image mapping (requires burner account, Russian Language)</p>
+              <p>&nbsp;</p>
+              <p><strong>Real-estate Sites</strong></p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://www.zillow.com/homes/">https://www.zillow.com/homes/</a> | Zillow mapped neighborhoods,
+                home interiors, property descriptions, sale dates, real-estate stats, etc.</p>
+              <p><a target="_blank" rel="noopener noreferrer" href="https://matterport.com">https://matterport.com</a> –
+                use Google operators on various real-estate sites to find client postings (site:matterport.com Denver)
+              </p>
+              <p>&nbsp;</p>
+              <p><strong>Additional Mapping Resources</strong></p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://stevemorse.org/jcal/latlon.php">https://stevemorse.org/jcal/latlon.php</a> | Street
+                Address | Lat/Long conversion</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://www.latlong.net/convert-address-to-lat-long.html">https://www.latlong.net/convert-address-to-lat-long.html</a>
+                | Address | Lat/Long conversion</p>
+              <p><a target="_blank" rel="noopener noreferrer" href="http://suncalc.net/">http://suncalc.net/</a> | Sun
+                position &amp; shadow estimation by geolocation</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://www.mapchecking.com/">https://www.mapchecking.com/</a> | Crowd size estimation (use for
+                civil disturbances etc.)</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="http://www.geonames.org/">http://www.geonames.org/</a>| Submit a search term and it will
+                generate a concise list of locations with corresponding geographical data</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://openstreetcam.org/">https://openstreetcam.org/</a> | Useful for locating public facing
+                cameras that may have captured video evidence. (note not all transportation departments record DOT
+                video)</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://tracker.geops.ch/">https://tracker.geops.ch/</a> | Transit maps</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://www.mapillary.com/app/">https://www.mapillary.com/app/</a> | Crowdsourced streetview
+                from cyclists</p>
+              <p><a target="_blank" rel="noopener noreferrer" href="https://liveuamap.com/">https://liveuamap.com/</a> |
+                International conflict, natural disasters, civil-unrest (some domestic US data as well, but limited)
+                mostly significant world conflicts and events</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://legacy.lib.utexas.edu/maps/">https://legacy.lib.utexas.edu/maps/</a> | U of T Maps of
+                &nbsp;current interest (pandemic, conflict, etc.)</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://flowingdata.com/tag/flights/">https://flowingdata.com/tag/flights/</a> | Aviation data
+                maps</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://openflights.org/">https://openflights.org/</a> | Aviation data maps</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6</a>
+                | Pandemic data Johns Hopkins, example of academic mapping&nbsp;</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://maps.safecity.in/main">https://maps.safecity.in/main</a> | Stalking, harassment reports
+                (crowd sourced via app)</p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://github.com/david-r-edgar/MapSwitcher">https://github.com/david-r-edgar/MapSwitcher</a> |
+                Multi map service Chrome extension</p>
+              <p>&nbsp;</p>
+              <p><strong>Forensic Data Mapping</strong></p>
+              <p><a target="_blank" rel="noopener noreferrer" href="https://opencellid.org">https://opencellid.org</a>
+              </p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://cellidfinder.com/">https://cellidfinder.com/</a></p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://cellphonetrackers.org/">https://cellphonetrackers.org/</a></p>
+              <p>&nbsp;</p>
+              <p><strong>Cyber Threat Maps</strong></p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://ics-radar.shodan.io/">https://ics-radar.shodan.io/</a></p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://cybermap.kaspersky.com/">https://cybermap.kaspersky.com/</a></p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://threatmap.checkpoint.com/ThreatPortal/livemap.html">https://threatmap.checkpoint.com/ThreatPortal/livemap.html</a>
+              </p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://threatmap.fortiguard.com/">https://threatmap.fortiguard.com/</a></p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://threatbutt.com/map/">https://threatbutt.com/map/</a></p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://talosintelligence.com/fullpage_maps/pulse">https://talosintelligence.com/fullpage_maps/pulse</a>
+              </p>
+              <p><a target="_blank" rel="noopener noreferrer"
+                  href="https://www.fireeye.com/cyber-map/threat-map.html">https://www.fireeye.com/cyber-map/threat-map.html</a>
+              </p>
+              <p>&nbsp;</p>
+            </div>
+          </div>
+        </div>
+        <p>&nbsp;</p>
+      </div>
+      <!-- /.content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="js/jquery.min.js"></script>
+  <!-- <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+
+
+
+</body>
+
+</html>
